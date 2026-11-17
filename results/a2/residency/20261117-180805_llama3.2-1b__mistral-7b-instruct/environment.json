@@ -1,0 +1,34 @@
+﻿{
+    "timestamp":  "2026-11-17T18:08:09.4708358+08:00",
+    "host":  "LIANDO",
+    "host_cpu":  "Intel(R) Core(TM) Ultra 7 155H",
+    "host_ram_gb":  15.61,
+    "docker_server_version":  "28.5.1",
+    "docker_ncpu":  22,
+    "docker_mem_gib":  9.713,
+    "ollama_container_memory_limit":  0,
+    "ollama_container_nano_cpus":  0,
+    "ollama_image":  "ollama/ollama:0.35.0",
+    "ollama_version":  "0.35.0",
+    "ollama_env":  [
+                       "OLLAMA_MAX_QUEUE=512",
+                       "OLLAMA_NUM_PARALLEL=1",
+                       "OLLAMA_HOST=0.0.0.0:11434"
+                   ],
+    "num_ctx":  4096,
+    "keep_alive":  "30m",
+    "small":  "llama3.2:1b",
+    "large":  "mistral:7b-instruct",
+    "models":  [
+                   {
+                       "name":  "mistral:7b-instruct",
+                       "digest":  "6577803aa9a036369e481d648a2baebb381ebc6e897f2bb9a766a2aa7bfbc1cf",
+                       "size":  4372824384
+                   },
+                   {
+                       "name":  "llama3.2:1b",
+                       "digest":  "baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878",
+                       "size":  1321098329
+                   }
+               ]
+}
