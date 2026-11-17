@@ -238,6 +238,7 @@ def create_ticket(ticket: TicketIn, request: Request):
         extra["error"] = "empty narrative"
         raise HTTPException(422, "narrative must not be empty")
     extra["mode"] = MODE
+    stage = "model"  # which call was in progress if a backend error happens
     try:
         if MODE == "single":
             category, res = classify(MODEL, ticket.narrative)
@@ -252,15 +253,21 @@ def create_ticket(ticket: TicketIn, request: Request):
                 eval_count=res["eval_tokens"],
             )
         else:
-            extra.update(small_model=SMALL_MODEL, large_model=LARGE_MODEL, rule=RULE, rule_setting=RULE_SETTING)
+            extra.update(small_model=SMALL_MODEL, large_model=LARGE_MODEL, rule=RULE, rule_setting=RULE_SETTING,
+                         routing="not_reached")
+            stage = "small"
             small_cat, small = classify(SMALL_MODEL, ticket.narrative)
             extra.update(small_category=small_cat, small_ms=small["ms"], small_load_ns=small["load_ns"])
+            stage = "rule"
             escalate, reason, conf = should_escalate(ticket.narrative, small_cat)
-            extra.update(escalated=escalate, escalation_reason=reason)
+            # routing="decided": the escalation decision was made, so this ticket counts in the
+            # escalation-fraction denominator even if the large-model call later fails.
+            extra.update(routing="decided", escalated=escalate, escalation_reason=reason)
             if conf is not None:
                 extra.update(confidence_answer=conf["answer"], confidence_ms=conf["ms"])
             ollama_ms = small["ms"] + (conf["ms"] if conf else 0)
             if escalate:
+                stage = "large"
                 category, large = classify(LARGE_MODEL, ticket.narrative)
                 final_model, raw = LARGE_MODEL, large["raw"]
                 extra.update(large_category=category, large_ms=large["ms"], large_load_ns=large["load_ns"])
@@ -270,7 +277,7 @@ def create_ticket(ticket: TicketIn, request: Request):
             extra.update(model=final_model, final_model=final_model, ollama_ms=round(ollama_ms, 1))
     except Exception as e:
         extra.update(model=extra.get("final_model", MODEL if MODE == "single" else SMALL_MODEL),
-                     error=str(e)[:200])
+                     error_stage=stage, error=str(e)[:200])
         raise HTTPException(502, f"model backend error: {e}")
 
     with db() as c:
