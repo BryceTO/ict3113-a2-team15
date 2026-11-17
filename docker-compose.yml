@@ -34,4 +34,6 @@ services:
 
 volumes:
   ollama_models:
+    # Reuse the A1 model store so A2 runs the exact same pulled models (same digests), no re-download.
+    name: ict3113-a1-team15_ollama_models
   triage_data:
