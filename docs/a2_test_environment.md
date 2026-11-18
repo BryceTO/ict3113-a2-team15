@@ -74,10 +74,10 @@ The cascade adds `MODE`, `SMALL_MODEL`, `LARGE_MODEL`, `RULE` and `RULE_SETTING`
 
 | Item | Value |
 |---|---|
-| Link | **`TODO`**: Tailscale as in A1, or the same local network |
-| Path | **`TODO`**: `tailscale status` shows `direct` (not relayed) |
+| Link | Tailscale, as in A1 |
+| Path | Direct, not relayed: `tailscale ping <service-host-ip>` answered through the service host's own address and port, not "via DERP" (10 ms) |
 | Protocol | Plain HTTP to the service host on port 8000 |
-| Round-trip time | **`TODO`**: `ping -n 10 <service-host-ip>` before calibration (A1: 25 ms mean, 10–94 ms) |
+| Round-trip time | `ping -n 10 <service-host-ip>` at the practice run: 50 ms mean, 11–106 ms, 0% loss. Repeated pings sometimes lose 1 of 10. A1: 25 ms mean, 10–94 ms. This is about 1% of a 5 s request, and the per-run overhead below shows its effect directly. Re-checked before calibration |
 | Network overhead per request | Reported per run as `median_outside_service_ms` in `results/a2/summary/a2_speed_runs.csv`: JMeter's elapsed time minus the service's logged latency |
 | Load generator Tailscale version | 1.104.1 |
 
@@ -115,6 +115,7 @@ Invoke-RestMethod http://<service-host-ip>:8000/health
 
 | Before | Digests same | Versions and settings same | Nothing else running on the service host | Notes |
 |---|---|---|---|---|
+| practice run (not a benchmark) | yes: `baf6a787fdff`, `a2af6cc3eb7f`, `6577803aa9a0` | yes: Engine 28.5.1, Compose 2.40.0, 22 CPUs, 10429063168 bytes (9.713 GiB), Ollama 0.35.0, `OLLAMA_NUM_PARALLEL=1`, `OLLAMA_MAX_QUEUE=512`. JMeter 5.6.3 | yes | Cascade with a placeholder rule setting, 2 arrivals: 2 sent, 2 completed, 2 stored by the service. Its log was deleted |
 | calibration | **`TODO`** | | | |
 | `gemma3-4b` | | | | |
 | `cascade_s1` | | | | |
