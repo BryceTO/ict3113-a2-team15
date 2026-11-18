@@ -5,6 +5,7 @@ import pytest
 
 from scripts.select_a2_workload import (
     InputValidationError,
+    build_parser,
     load_golden_ids,
     load_source,
     main,
@@ -54,6 +55,12 @@ def make_golden(path: Path, row_ids: list[int]) -> None:
 def test_percentile_uses_linear_n_minus_one_interpolation() -> None:
     assert percentile([0, 10, 20, 30], 0.25) == pytest.approx(7.5)
     assert percentile([0, 10, 20, 30], 0.90) == pytest.approx(27.0)
+
+
+def test_official_cli_defaults_cover_sixty_measured_tickets() -> None:
+    args = build_parser().parse_args([])
+    assert args.measured_count == 60
+    assert args.long_count == 12
 
 
 def test_selection_is_deterministic_disjoint_and_excludes_golden(tmp_path: Path) -> None:

@@ -5,33 +5,63 @@ warmup,3,15859,Bank account or service,489,typical
 calibration,1,15363,Mortgage,1216,typical
 calibration,2,15464,Money transfer or service,797,typical
 calibration,3,15871,Bank account or service,494,typical
-measured,1,15234,Consumer loan,1903,long
-measured,2,15256,Money transfer or service,807,typical
-measured,3,15275,Consumer loan,947,typical
-measured,4,15289,Mortgage,513,typical
-measured,5,15331,Consumer loan,642,typical
-measured,6,15337,Credit reporting,695,typical
-measured,7,15341,Bank account or service,715,typical
-measured,8,15374,Bank account or service,497,typical
-measured,9,15375,Bank account or service,1605,long
-measured,10,15414,Mortgage,1215,typical
-measured,11,15450,Debt collection,1834,long
-measured,12,15466,Credit card,871,typical
-measured,13,15489,Money transfer or service,785,typical
-measured,14,15513,Mortgage,979,typical
-measured,15,15523,Bank account or service,1669,long
-measured,16,15534,Bank account or service,905,typical
-measured,17,15587,Mortgage,1989,long
-measured,18,15696,Bank account or service,1741,long
-measured,19,15737,Bank account or service,837,typical
-measured,20,15767,Debt collection,1162,typical
-measured,21,15799,Mortgage,672,typical
-measured,22,15806,Consumer loan,745,typical
-measured,23,15839,Mortgage,585,typical
-measured,24,15863,Bank account or service,1048,typical
-measured,25,15881,Credit reporting,659,typical
-measured,26,15896,Credit card,1009,typical
-measured,27,15928,Consumer loan,1088,typical
-measured,28,15943,Credit card,554,typical
-measured,29,15977,Mortgage,1122,typical
-measured,30,15995,Mortgage,608,typical
+measured,1,15182,Mortgage,996,typical
+measured,2,15196,Consumer loan,1127,typical
+measured,3,15220,Credit reporting,768,typical
+measured,4,15224,Mortgage,710,typical
+measured,5,15232,Bank account or service,877,typical
+measured,6,15251,Credit reporting,1090,typical
+measured,7,15271,Mortgage,1763,long
+measured,8,15284,Money transfer or service,608,typical
+measured,9,15289,Mortgage,513,typical
+measured,10,15293,Credit reporting,1664,long
+measured,11,15319,Bank account or service,1050,typical
+measured,12,15325,Bank account or service,968,typical
+measured,13,15340,Consumer loan,669,typical
+measured,14,15358,Bank account or service,1068,typical
+measured,15,15374,Bank account or service,497,typical
+measured,16,15375,Bank account or service,1605,long
+measured,17,15382,Money transfer or service,950,typical
+measured,18,15414,Mortgage,1215,typical
+measured,19,15428,Debt collection,1180,typical
+measured,20,15437,Consumer loan,704,typical
+measured,21,15447,Money transfer or service,1872,long
+measured,22,15481,Credit card,530,typical
+measured,23,15498,Money transfer or service,663,typical
+measured,24,15499,Debt collection,572,typical
+measured,25,15504,Credit reporting,1143,typical
+measured,26,15509,Debt collection,550,typical
+measured,27,15529,Mortgage,639,typical
+measured,28,15531,Money transfer or service,801,typical
+measured,29,15533,Bank account or service,1110,typical
+measured,30,15536,Debt collection,1947,long
+measured,31,15579,Consumer loan,793,typical
+measured,32,15587,Mortgage,1989,long
+measured,33,15622,Bank account or service,1692,long
+measured,34,15629,Credit card,1011,typical
+measured,35,15636,Debt collection,932,typical
+measured,36,15648,Debt collection,913,typical
+measured,37,15663,Credit reporting,1035,typical
+measured,38,15690,Consumer loan,1852,long
+measured,39,15710,Credit card,831,typical
+measured,40,15719,Credit reporting,1720,long
+measured,41,15722,Mortgage,690,typical
+measured,42,15754,Credit reporting,739,typical
+measured,43,15755,Money transfer or service,725,typical
+measured,44,15756,Mortgage,1646,long
+measured,45,15767,Debt collection,1162,typical
+measured,46,15776,Bank account or service,985,typical
+measured,47,15777,Consumer loan,887,typical
+measured,48,15780,Credit reporting,583,typical
+measured,49,15792,Money transfer or service,1905,long
+measured,50,15816,Money transfer or service,865,typical
+measured,51,15828,Money transfer or service,683,typical
+measured,52,15844,Credit card,596,typical
+measured,53,15858,Bank account or service,850,typical
+measured,54,15875,Consumer loan,1797,long
+measured,55,15879,Credit card,776,typical
+measured,56,15895,Consumer loan,815,typical
+measured,57,15963,Mortgage,654,typical
+measured,58,15971,Consumer loan,625,typical
+measured,59,15982,Debt collection,657,typical
+measured,60,15999,Credit reporting,505,typical

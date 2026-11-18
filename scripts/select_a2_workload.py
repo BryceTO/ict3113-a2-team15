@@ -373,14 +373,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--measured-count",
         type=int,
-        default=30,
-        help="number of measured speed-test tickets (provisional default: 30)",
+        default=60,
+        help="number of measured speed-test tickets (default: 60)",
     )
     parser.add_argument(
         "--long-count",
         type=int,
-        default=6,
-        help="number of measured tickets drawn from the p90+ length band (default: 6)",
+        default=12,
+        help="number of measured tickets drawn from the p90+ length band (default: 12)",
     )
     parser.add_argument("--warmup-count", type=int, default=3)
     parser.add_argument("--calibration-count", type=int, default=3)
