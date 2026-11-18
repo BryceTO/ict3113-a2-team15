@@ -52,7 +52,7 @@ function Get-A2Config($configs, [string]$id) {
     return $c.Value
 }
 
-# The PowerShell line Li runs on the service host to start the service for a run.
+# The PowerShell line to run on the service host to start the service for a run.
 function Get-A2HostCommand($cfg, [string]$runId) {
     if ($cfg.mode -eq "single") {
         $env = "`$env:MODE=`"single`"; `$env:MODEL=`"$($cfg.models[0])`""
@@ -87,7 +87,7 @@ function Get-A2StatsTotal($stats) {
 
 # Reads a workload TSV (row_id<TAB>json body) into objects.
 function Read-A2Tsv([string]$path) {
-    if (-not (Test-Path $path)) { throw "Missing $path. Put Bryan's workload files in context\a2_workload\ (git-ignored)." }
+    if (-not (Test-Path $path)) { throw "Missing $path. Put the private workload files in context\a2_workload\ (git-ignored)." }
     $rows = @()
     foreach ($line in [System.IO.File]::ReadAllLines($path, [System.Text.Encoding]::UTF8)) {
         if (-not $line.Trim()) { continue }
@@ -108,7 +108,7 @@ function Test-A2Workload([string]$dir) {
                 $file = Join-Path $dir $Matches[2].Trim()
                 if (-not (Test-Path $file)) { continue }
                 $actual = (Get-FileHash -Algorithm SHA256 $file).Hash.ToLower()
-                if ($actual -ne $Matches[1].ToLower()) { throw "SHA-256 mismatch for $($Matches[2]). The workload files changed: get a fresh package from Bryan." }
+                if ($actual -ne $Matches[1].ToLower()) { throw "SHA-256 mismatch for $($Matches[2]). The workload files changed: get a fresh package from the Workload & Requirements Lead." }
                 $hashes[$Matches[2].Trim()] = $actual
             }
         }

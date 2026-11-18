@@ -82,7 +82,6 @@ $record = [ordered]@{
     model              = $cfg.models[0]
     target             = $baseUrl
     measured_at_utc    = [DateTime]::UtcNow.ToString("o")
-    load_generator     = $env:COMPUTERNAME
     timing_method      = "client-side wall time of each sequential POST /tickets (System.Diagnostics.Stopwatch), the same clock JMeter's elapsed uses"
     health_before      = $health
     health_after       = $healthAfter
@@ -112,6 +111,6 @@ Write-Host "Response timeout      $($s.response_timeout_s) s"
 Write-Host "Drain pause           $($s.drain_pause_s) s"
 Write-Host "Planned arrivals/run  $($s.planned_arrivals)   (feeder has $feederRows rows)"
 Write-Host "Schedule              $($s.schedule)"
-if ($s.s_seconds -lt 5) { Write-Warning "S < 5 s: the 5-minute minimum gives $($s.planned_arrivals) arrivals per run. Tell Bryan now." }
-if ($s.planned_arrivals -gt $feederRows) { Write-Warning "The feeder is too short ($feederRows rows). Official runs are blocked until Bryan extends it." }
+if ($s.s_seconds -lt 5) { Write-Warning "S < 5 s: the 5-minute minimum gives $($s.planned_arrivals) arrivals per run. Tell the Workload & Requirements Lead now." }
+if ($s.planned_arrivals -gt $feederRows) { Write-Warning "The feeder is too short ($feederRows rows). Official runs are blocked until the Workload & Requirements Lead extends it." }
 Write-Host "`nSaved $out. Commit it with results/logs/a2_gemma3-4b_calibration.log from the service host."
