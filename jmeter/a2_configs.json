@@ -1,0 +1,8 @@
+{
+  "_comment": "A2 configuration IDs. a2_run_load.ps1 and a2_calibrate.ps1 check GET /health against these before sending any load, and print the service-host command. For the cascade, fill rule and rule_setting from docs/escalation_rule.md once the Model & Accuracy Lead freezes them (before the first benchmark run). While they are null the runner records whatever the service reports and warns.",
+  "llama3.2-1b": { "mode": "single", "models": ["llama3.2:1b"] },
+  "gemma3-4b": { "mode": "single", "models": ["gemma3:4b"] },
+  "mistral-7b-instruct": { "mode": "single", "models": ["mistral:7b-instruct"] },
+  "cascade_s1": { "mode": "cascade", "models": ["llama3.2:1b", "gemma3:4b"], "rule": null, "rule_setting": null },
+  "cascade_s2": { "mode": "cascade", "models": ["llama3.2:1b", "gemma3:4b"], "rule": null, "rule_setting": null }
+}
