@@ -1,11 +1,11 @@
 # A2 Speed-Test Playbook
 
-Owner: Zd (JMeter, performance and run evidence). This covers calibration and the speed runs (brief, Step 4). The accuracy test is Li's procedure and runs **first**.
+Owner: Performance Testing Lead. This covers calibration and the speed runs (brief, Step 4). The accuracy test is the Model & Accuracy Lead's procedure and runs **first**.
 
 ## 1. Gate: do not start official runs until all are true
 
 - `docs/escalation_rule.md`, `predictions/a2_prediction_record.md` and `jmeter/a2_workload_rows.csv` are committed. Record the commit hash here: `________`.
-- Li has published the accuracy results and the speed-eligibility list (which singles pass both floors).
+- The Model & Accuracy Lead has published the accuracy results and the speed-eligibility list (which singles pass both floors).
 - The cascade `rule` and `rule_setting` for `cascade_s1` and `cascade_s2` are filled in `jmeter/a2_configs.json` from the frozen rule.
 - `docs/a2_test_environment.md` records versions, digests, CPU/RAM limits and Ollama settings. Re-check them before each configuration.
 - Nothing else runs on the service host during a run.
@@ -14,15 +14,15 @@ Owner: Zd (JMeter, performance and run evidence). This covers calibration and th
 
 | Role | Machine | Runs |
 |---|---|---|
-| Service host | Li's laptop (A1 test machine) | Docker: triage service + Ollama 0.35.0, CPU only |
-| Load generator | Zd's laptop (A1 JMeter machine) | JMeter 5.6.3, these scripts |
+| Service host | The A1 service host laptop | Docker: triage service + Ollama 0.35.0, CPU only |
+| Load generator | The A1 JMeter laptop | JMeter 5.6.3, these scripts |
 
 Same machines, CPU and RAM allocation as A1 (`docs/test_environment.md`).
 
 ## 3. One-time setup on the load generator
 
-1. Put Bryan's private workload files in `context/a2_workload/`. This folder is git-ignored, so never commit them. The files are `measured_feeder.tsv`, `warmup_requests.tsv`, `calibration_requests.tsv` and `SHA256SUMS.txt`. The scripts check the hashes on every run.
-2. Set JMeter: `$env:JMETER_HOME = "C:\Users\8Z\Downloads\apache-jmeter-5.6.3"`
+1. Put the private workload files from the Workload & Requirements Lead in `context/a2_workload/`. This folder is git-ignored, so never commit them. The files are `measured_feeder.tsv`, `warmup_requests.tsv`, `calibration_requests.tsv` and `SHA256SUMS.txt`. The scripts check the hashes on every run.
+2. Set JMeter: `$env:JMETER_HOME = "<folder>\apache-jmeter-5.6.3"`
 3. Check that the service is reachable: `Invoke-RestMethod http://<service-host-ip>:8000/health`
 
 ## 4. Calibration: once, after the accuracy tests
@@ -42,7 +42,7 @@ The script:
 4. Takes **S** as the middle of the three times, rounded to 0.1 s.
 5. Saves `results/a2/calibration/a2_calibration.json`.
 
-Commit that file together with `results/logs/a2_gemma3-4b_calibration.log`. Then send Bryan the three row IDs, the three timings, S, the interval, the rate and the window.
+Commit that file together with `results/logs/a2_gemma3-4b_calibration.log`. Then send the Workload & Requirements Lead the three row IDs, the three timings, S, the interval, the rate and the window.
 
 | Setting | Rule | Source |
 |---|---|---|
@@ -53,7 +53,7 @@ Commit that file together with `results/logs/a2_gemma3-4b_calibration.log`. Then
 | Drain pause | timeout + 60 s | brief: longer than the timeout by at least 1 min |
 | Seed | run number | run r1 has the same arrival times in every configuration |
 
-**Arrival count.** JMeter's Open Model Thread Group sends exactly floor(rate × window) tickets at random times. This was checked on all 19 A1 runs and in a test on 18 Nov. With S ≥ 5 that is 30 tickets per run. With S < 5 it is more (S = 4 gives 37), and the runner refuses to start if the feeder is shorter than that. The rate is rounded up at the 6th decimal, because 4.8387/min would give 29 instead of 30. The feeder never wraps: `recycle=false`, `stopThread=true`.
+**Arrival count.** JMeter's Open Model Thread Group sends exactly floor(rate × window) tickets at random times. This was checked on all 19 A1 runs and in a separate JMeter test. With S ≥ 5 that is 30 tickets per run. With S < 5 it is more (S = 4 gives 37), and the runner refuses to start if the feeder is shorter than that. The rate is rounded up at the 6th decimal, because 4.8387/min would give 29 instead of 30. The feeder never wraps: `recycle=false`, `stopThread=true`.
 
 ## 5. One run
 

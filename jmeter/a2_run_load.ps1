@@ -54,7 +54,8 @@ if ($S -gt 0) {
 } else {
     if (-not (Test-Path $calPath)) { throw "No calibration file at $calPath. Run scripts\a2_calibrate.ps1 first." }
     $S = (Get-Content $calPath -Raw | ConvertFrom-Json).settings.s_seconds
-    $sSource = $calPath.Replace($repo + "\", "")
+    # never record a local absolute path (it contains the Windows user name)
+    $sSource = if ($calPath.StartsWith($repo + "\")) { $calPath.Substring($repo.Length + 1) } else { Split-Path -Leaf $calPath }
 }
 $st = Get-A2Settings $S
 if ($Schedule) {
@@ -84,7 +85,7 @@ if ($ShowSettings) {
     return
 }
 if (-not $Schedule -and $st.planned_arrivals -gt $feeder.Count) {
-    throw "The schedule sends $($st.planned_arrivals) tickets but the feeder has $($feeder.Count) rows (S = $($st.s_seconds) s). Ask Bryan to extend the ordered feeder; do not wrap or shorten the window."
+    throw "The schedule sends $($st.planned_arrivals) tickets but the feeder has $($feeder.Count) rows (S = $($st.s_seconds) s). Ask the Workload & Requirements Lead to extend the ordered feeder; do not wrap or shorten the window."
 }
 
 $outDir = if ($OutDir) { $OutDir } else { Join-Path $repo "results\a2\jtl" }
@@ -149,13 +150,18 @@ Write-Host "Resident: $(@($healthReady.loaded_models) -join ', ')"
 # --- 4. stats before, JMeter, stats after ----------------------------------------
 $statsBefore = Invoke-RestMethod -Uri "$baseUrl/stats" -TimeoutSec 30
 $fwd = { param($p) $p.Replace("\", "/") }   # Java .properties treats \ as an escape
+# JMeter resolves a relative CSV path against the plan's folder (jmeter\). Inside the repo, write it
+# relative so the committed .properties holds no local path (it would contain the Windows user name).
+$feederProp = if ((Resolve-Path $feederPath).Path.StartsWith($repo + "\")) {
+    "../" + (Resolve-Path $feederPath).Path.Substring($repo.Length + 1)
+} else { $feederPath }
 @"
 protocol=$Scheme
 host=$TargetHost
 port=$Port
 connect_timeout_ms=10000
 response_timeout_ms=$($st.response_timeout_s * 1000)
-feeder=$(& $fwd $feederPath)
+feeder=$(& $fwd $feederProp)
 schedule=$($st.schedule)
 seed=$Run
 sample_variables=row_id,request_id
@@ -171,8 +177,7 @@ $meta = [ordered]@{
     mode                 = $cfg.mode
     models               = $cfg.models
     target               = $baseUrl
-    load_generator       = $env:COMPUTERNAME
-    jmeter_home          = $JMeterHome
+    jmeter_version       = (Split-Path -Leaf $JMeterHome)   # folder name only, e.g. apache-jmeter-5.6.3 (no local path)
     s_source             = $sSource
     settings             = $st
     seed                 = $Run
