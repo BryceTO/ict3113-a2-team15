@@ -4,7 +4,7 @@
 
 This document records Team 15's fixed workload for the Assignment 2 speed tests. Every speed-tested configuration uses the measured tickets in the same order. The committed row list is `jmeter/a2_workload_rows.csv`; the generated `jmeter/feeder.tsv` is local and ignored by Git because it contains narratives from the private Team 15 extract.
 
-This 60-row measured workload supersedes the earlier 30-row freeze in commit `843f09a`. No official benchmark run used the earlier list. Assignment 1 evidence indicated that the top model's calibration time could be below five seconds, so the five-minute minimum run window required a longer feeder.
+This 60-row measured workload supersedes the earlier 30-row freeze in commit `843f09a`. No official benchmark run used the earlier list. The selector was rerun for 60 rows rather than appending to the old list, so only 6 of the old 30 measured rows remain in v2. All slides, run metadata, and evidence indexes must cite the v2 freeze `641d383`. Assignment 1 evidence indicated that the top model's calibration time could be below five seconds, so the five-minute minimum run window required a longer feeder.
 
 ## Inputs
 
@@ -42,9 +42,9 @@ The final workload contains:
 | Measured long | 12 | Long requests available for reported speed results |
 | Total | 66 | All selected rows across the three disjoint purposes |
 
-Thirty measured tickets follow the assignment's expected run size when `S` is at least five seconds: one request every `2 x S` seconds for `S` minutes produces approximately 30 arrivals. When `S` is below five seconds, the required five-minute minimum produces approximately `ceil(150 / S)` arrivals. The 60-row feeder therefore covers calibration values down to `S = 2.5` seconds.
+Thirty measured tickets follow the assignment's expected run size when `S` is at least five seconds: one request every `2 x S` seconds for `S` minutes produces 30 scheduled arrivals. When `S` is below five seconds, the current JMeter schedule rounds the five-minute count down, so `N = floor(150 / S)`. This gives 37 rows at `S = 4`, 50 at `S = 3`, and 60 at `S = 2.5`. The calibration output and each run's `.meta.json` record the exact `N` and are authoritative for reporting.
 
-After calibration, the benchmark owner calculates the exact scheduled request count `N`. Every configuration must consume the same first `N` measured rows in the committed order. The remaining feeder rows are unused. If `S < 2.5` seconds or the configured schedule would send more than 60 requests, official runs must not start until Bryan extends and re-freezes the workload.
+After calibration, the benchmark owner takes the exact scheduled request count `N` from the calibration output and verifies it against the run metadata. Every configuration must consume the same first `N` measured rows in the committed order. The remaining feeder rows are unused. If `S < 2.5` seconds or the configured schedule would send more than 60 requests, official runs must not start until Bryan extends and re-freezes the workload. When `N = 30`, the v2 prefix contains 25 typical and 5 long tickets.
 
 ## Measured workload profile
 
