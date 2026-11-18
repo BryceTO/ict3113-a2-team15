@@ -1,0 +1,88 @@
+row,golden_label,llama_prediction,llama_correct,llama_http_ok,gemma_prediction,gemma_correct,gemma_http_ok
+15001,credit reporting,bank account or service,False,True,credit reporting,True,True
+15003,money transfer or service,bank account or service,False,True,money transfer or service,True,True
+15005,money transfer or service,bank account or service,False,True,money transfer or service,True,True
+15007,credit card,bank account or service,False,True,credit card,True,True
+15009,bank account or service,bank account or service,True,True,bank account or service,True,True
+15011,credit card,bank account or service,False,True,credit card,True,True
+15013,bank account or service,bank account or service,True,True,bank account or service,True,True
+15015,money transfer or service,bank account or service,False,True,money transfer or service,True,True
+15017,debt collection,bank account or service,False,True,credit reporting,False,True
+15019,credit reporting,credit reporting,True,True,credit reporting,True,True
+15021,money transfer or service,bank account or service,False,True,money transfer or service,True,True
+15023,credit reporting,bank account or service,False,True,credit reporting,True,True
+15025,credit card,bank account or service,False,True,credit card,True,True
+15027,mortgage,bank account or service,False,True,mortgage,True,True
+15029,mortgage,bank account or service,False,True,mortgage,True,True
+15031,money transfer or service,bank account or service,False,True,bank account or service,False,True
+15033,consumer loan,bank account or service,False,True,debt collection,False,True
+15035,credit reporting,bank account or service,False,True,credit reporting,True,True
+15037,credit reporting,consumer loan,False,True,credit reporting,True,True
+15039,credit card,bank account or service,False,True,credit card,True,True
+15041,credit card,bank account or service,False,True,credit card,True,True
+15043,credit card,credit reporting,False,True,credit card,True,True
+15045,credit card,bank account or service,False,True,credit card,True,True
+15047,money transfer or service,bank account or service,False,True,money transfer or service,True,True
+15049,bank account or service,bank account or service,True,True,bank account or service,True,True
+15051,credit card,bank account or service,False,True,credit card,True,True
+15053,debt collection,bank account or service,False,True,credit card,False,True
+15055,consumer loan,bank account or service,False,True,consumer loan,True,True
+15057,money transfer or service,bank account or service,False,True,money transfer or service,True,True
+15059,credit reporting,bank account or service,False,True,credit reporting,True,True
+15061,debt collection,bank account or service,False,True,debt collection,True,True
+15063,bank account or service,bank account or service,True,True,credit card,False,True
+15065,debt collection,bank account or service,False,True,bank account or service,False,True
+15067,bank account or service,bank account or service,True,True,bank account or service,True,True
+15069,money transfer or service,bank account or service,False,True,money transfer or service,True,True
+15071,debt collection,bank account or service,False,True,debt collection,True,True
+15073,bank account or service,bank account or service,True,True,bank account or service,True,True
+15075,mortgage,bank account or service,False,True,mortgage,True,True
+15077,credit card,bank account or service,False,True,credit card,True,True
+15079,mortgage,bank account or service,False,True,mortgage,True,True
+15081,debt collection,bank account or service,False,True,debt collection,True,True
+15083,mortgage,mortgage,True,True,mortgage,True,True
+15085,consumer loan,bank account or service,False,True,consumer loan,True,True
+15087,credit reporting,bank account or service,False,True,credit reporting,True,True
+15089,money transfer or service,bank account or service,False,True,debt collection,False,True
+15091,bank account or service,bank account or service,True,True,credit card,False,True
+15093,debt collection,bank account or service,False,True,debt collection,True,True
+15095,money transfer or service,bank account or service,False,True,money transfer or service,True,True
+15097,bank account or service,bank account or service,True,True,credit card,False,True
+15099,money transfer or service,bank account or service,False,True,money transfer or service,True,True
+15101,debt collection,bank account or service,False,True,debt collection,True,True
+15103,bank account or service,bank account or service,True,True,bank account or service,True,True
+15105,credit card,bank account or service,False,True,credit card,True,True
+15107,credit reporting,bank account or service,False,True,credit reporting,True,True
+15109,bank account or service,bank account or service,True,True,bank account or service,True,True
+15111,consumer loan,credit reporting,False,True,credit reporting,False,True
+15113,credit reporting,bank account or service,False,True,credit card,False,True
+15115,money transfer or service,bank account or service,False,True,bank account or service,False,True
+15117,credit reporting,bank account or service,False,True,credit reporting,True,True
+15119,consumer loan,bank account or service,False,True,debt collection,False,True
+15121,credit reporting,bank account or service,False,True,credit reporting,True,True
+15123,credit reporting,bank account or service,False,True,credit reporting,True,True
+15125,mortgage,bank account or service,False,True,mortgage,True,True
+15127,credit reporting,bank account or service,False,True,credit reporting,True,True
+15129,credit card,credit reporting,False,True,credit card,True,True
+15131,mortgage,bank account or service,False,True,mortgage,True,True
+15133,debt collection,bank account or service,False,True,debt collection,True,True
+15135,credit reporting,credit reporting,True,True,credit reporting,True,True
+15137,consumer loan,bank account or service,False,True,bank account or service,False,True
+15139,bank account or service,bank account or service,True,True,bank account or service,True,True
+15141,consumer loan,credit reporting,False,True,credit reporting,False,True
+15143,money transfer or service,bank account or service,False,True,credit card,False,True
+15145,credit reporting,credit reporting,True,True,credit reporting,True,True
+15147,mortgage,bank account or service,False,True,mortgage,True,True
+15149,credit reporting,bank account or service,False,True,debt collection,False,True
+15151,money transfer or service,bank account or service,False,True,credit card,False,True
+15153,mortgage,bank account or service,False,True,mortgage,True,True
+15155,consumer loan,bank account or service,False,True,credit reporting,False,True
+15157,credit card,bank account or service,False,True,credit card,True,True
+15159,money transfer or service,bank account or service,False,True,money transfer or service,True,True
+15161,consumer loan,bank account or service,False,True,credit card,False,True
+15163,bank account or service,bank account or service,True,True,bank account or service,True,True
+15165,credit card,bank account or service,False,True,credit card,True,True
+15167,mortgage,bank account or service,False,True,consumer loan,False,True
+15169,bank account or service,bank account or service,True,True,bank account or service,True,True
+15171,mortgage,bank account or service,False,True,mortgage,True,True
+15173,mortgage,bank account or service,False,True,mortgage,True,True
