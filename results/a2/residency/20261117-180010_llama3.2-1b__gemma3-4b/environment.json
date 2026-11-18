@@ -1,0 +1,33 @@
+﻿{
+    "timestamp":  "2026-11-17T18:00:14.0210909+08:00",
+    "host_cpu":  "Intel(R) Core(TM) Ultra 7 155H",
+    "host_ram_gb":  15.61,
+    "docker_server_version":  "28.5.1",
+    "docker_ncpu":  22,
+    "docker_mem_gib":  9.713,
+    "ollama_container_memory_limit":  0,
+    "ollama_container_nano_cpus":  0,
+    "ollama_image":  "ollama/ollama:0.35.0",
+    "ollama_version":  "0.35.0",
+    "ollama_env":  [
+                       "OLLAMA_MAX_QUEUE=512",
+                       "OLLAMA_NUM_PARALLEL=1",
+                       "OLLAMA_HOST=0.0.0.0:11434"
+                   ],
+    "num_ctx":  4096,
+    "keep_alive":  "30m",
+    "small":  "llama3.2:1b",
+    "large":  "gemma3:4b",
+    "models":  [
+                   {
+                       "name":  "gemma3:4b",
+                       "digest":  "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a",
+                       "size":  3338801804
+                   },
+                   {
+                       "name":  "llama3.2:1b",
+                       "digest":  "baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878",
+                       "size":  1321098329
+                   }
+               ]
+}
