@@ -1,0 +1,37 @@
+purpose,order,row_id,source_label,narrative_chars,length_group
+warmup,1,15520,Mortgage,796,typical
+warmup,2,15675,Mortgage,1216,typical
+warmup,3,15859,Bank account or service,489,typical
+calibration,1,15363,Mortgage,1216,typical
+calibration,2,15464,Money transfer or service,797,typical
+calibration,3,15871,Bank account or service,494,typical
+measured,1,15234,Consumer loan,1903,long
+measured,2,15256,Money transfer or service,807,typical
+measured,3,15275,Consumer loan,947,typical
+measured,4,15289,Mortgage,513,typical
+measured,5,15331,Consumer loan,642,typical
+measured,6,15337,Credit reporting,695,typical
+measured,7,15341,Bank account or service,715,typical
+measured,8,15374,Bank account or service,497,typical
+measured,9,15375,Bank account or service,1605,long
+measured,10,15414,Mortgage,1215,typical
+measured,11,15450,Debt collection,1834,long
+measured,12,15466,Credit card,871,typical
+measured,13,15489,Money transfer or service,785,typical
+measured,14,15513,Mortgage,979,typical
+measured,15,15523,Bank account or service,1669,long
+measured,16,15534,Bank account or service,905,typical
+measured,17,15587,Mortgage,1989,long
+measured,18,15696,Bank account or service,1741,long
+measured,19,15737,Bank account or service,837,typical
+measured,20,15767,Debt collection,1162,typical
+measured,21,15799,Mortgage,672,typical
+measured,22,15806,Consumer loan,745,typical
+measured,23,15839,Mortgage,585,typical
+measured,24,15863,Bank account or service,1048,typical
+measured,25,15881,Credit reporting,659,typical
+measured,26,15896,Credit card,1009,typical
+measured,27,15928,Consumer loan,1088,typical
+measured,28,15943,Credit card,554,typical
+measured,29,15977,Mortgage,1122,typical
+measured,30,15995,Mortgage,608,typical
