@@ -1,0 +1,14 @@
+﻿{
+    "status":  "ok",
+    "mode":  "single",
+    "configured_models":  [
+                              "mistral:7b-instruct"
+                          ],
+    "rule":  null,
+    "rule_setting":  null,
+    "ollama":  "up",
+    "loaded_models":  [
+                          "mistral:7b-instruct"
+                      ],
+    "all_configured_loaded":  true
+}

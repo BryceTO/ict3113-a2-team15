@@ -1,0 +1,9 @@
+﻿{
+    "config":  "llama3.2-1b",
+    "run_id":  "a2_llama3.2-1b_accuracy_20261119T092405Z_e545b8fe",
+    "mode":  "single",
+    "models":  [
+                   "llama3.2:1b"
+               ],
+    "threshold":  null
+}

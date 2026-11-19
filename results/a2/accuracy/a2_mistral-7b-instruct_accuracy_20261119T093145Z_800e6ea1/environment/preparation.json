@@ -1,0 +1,9 @@
+﻿{
+    "config":  "mistral-7b-instruct",
+    "run_id":  "a2_mistral-7b-instruct_accuracy_20261119T093145Z_800e6ea1",
+    "mode":  "single",
+    "models":  [
+                   "mistral:7b-instruct"
+               ],
+    "threshold":  null
+}

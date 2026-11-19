@@ -1,0 +1,37 @@
+﻿[
+    {
+        "Service":  "triage",
+        "Image":  "ict3113-a2-team15-triage",
+        "ImageId":  "sha256:e421a29d4616d8d1ad448fbb095520a3f2480fefed95b1df414adcde56980dbd",
+        "NanoCpus":  0,
+        "Memory":  0,
+        "CpuQuota":  0,
+        "CpuPeriod":  0,
+        "CpusetCpus":  "",
+        "Environment":  [
+                            "NUM_CTX=4096",
+                            "MODE=cascade",
+                            "KEEP_ALIVE=30m",
+                            "RUN_ID=a2_cascade_s2_accuracy_20261119T151248Z_959b77e7",
+                            "RULE_SETTING=289",
+                            "RULE=length",
+                            "LARGE_MODEL=gemma3:4b",
+                            "MODEL=llama3.2:1b",
+                            "SMALL_MODEL=llama3.2:1b"
+                        ]
+    },
+    {
+        "Service":  "ollama",
+        "Image":  "ollama/ollama:0.35.0",
+        "ImageId":  "sha256:2a6e883b917fc543389599dae79918f5cac9e1438890506982f44aa4f5625d01",
+        "NanoCpus":  0,
+        "Memory":  0,
+        "CpuQuota":  0,
+        "CpuPeriod":  0,
+        "CpusetCpus":  "",
+        "Environment":  [
+                            "OLLAMA_MAX_QUEUE=512",
+                            "OLLAMA_NUM_PARALLEL=1"
+                        ]
+    }
+]

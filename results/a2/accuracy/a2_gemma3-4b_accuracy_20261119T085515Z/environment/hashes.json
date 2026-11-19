@@ -1,0 +1,42 @@
+﻿[
+    {
+        "File":  "compose_version.txt",
+        "SHA256":  "f39d912f13a16a99156d32bd6f694756c48fe92b030c8d3595dd36c0142c4e66"
+    },
+    {
+        "File":  "containers.json",
+        "SHA256":  "091e661d2022ee44f5f23487ab947e446e65e362af7fd9129a28d26f45723d6e"
+    },
+    {
+        "File":  "deployed_main.py",
+        "SHA256":  "101ed5b847573adf4362c20c17c7b433a834c1879efd3f0cc55390ac465b2aba"
+    },
+    {
+        "File":  "docker_resources.json",
+        "SHA256":  "244f17cff3466ad5f1cafdd57427de980fff0826cff18716f31cfc6e0e63be80"
+    },
+    {
+        "File":  "docker_version.json",
+        "SHA256":  "7aa6d58ccc300480c571a4ad145cd17911daf24d8e2da465d0d2fee3ba09b5c3"
+    },
+    {
+        "File":  "health.json",
+        "SHA256":  "729f609c2d9d2bfdd5b7fccf96dac04d385dac76511b7e72ebcc941e39850997"
+    },
+    {
+        "File":  "inference_settings.txt",
+        "SHA256":  "763914f89d78a772df5a2da28f5c168fcc0d2b16bf7dcc994a8622969c5c19c2"
+    },
+    {
+        "File":  "model_digests.json",
+        "SHA256":  "66772924171db834949272081d957273e51437383109beb7e9a94271f1e01931"
+    },
+    {
+        "File":  "ollama_version.json",
+        "SHA256":  "7bf7b75dc1905eca0e7dc74b86db309786aec574b6bbba7bc8dce3a3182896ec"
+    },
+    {
+        "File":  "residency.json",
+        "SHA256":  "96756d832bafff801fdefa221c31a4d17fd99fedd5571c5482920c1b352fcafe"
+    }
+]

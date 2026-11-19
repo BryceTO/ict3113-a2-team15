@@ -1,0 +1,12 @@
+{
+  "http_status": 200,
+  "headers": {
+    "date": "Thu, 19 Nov 2026 12:26:56 GMT",
+    "server": "uvicorn",
+    "content-length": "204",
+    "content-type": "application/json",
+    "x-request-id": "1b6f4e4f-7fb4-492d-8a7e-9bf812c92f9e",
+    "connection": "close"
+  },
+  "body": "{\"status\":\"ok\",\"mode\":\"cascade\",\"configured_models\":[\"llama3.2:1b\",\"gemma3:4b\"],\"rule\":\"length\",\"rule_setting\":\"241\",\"ollama\":\"up\",\"loaded_models\":[\"gemma3:4b\",\"llama3.2:1b\"],\"all_configured_loaded\":true}"
+}

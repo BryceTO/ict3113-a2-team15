@@ -1,0 +1,10 @@
+﻿{
+    "config":  "cascade_s2",
+    "run_id":  "a2_cascade_s2_accuracy_20261119T151248Z_959b77e7",
+    "mode":  "cascade",
+    "models":  [
+                   "llama3.2:1b",
+                   "gemma3:4b"
+               ],
+    "threshold":  289
+}
