@@ -1,6 +1,6 @@
 # A2 accuracy incidents
 
-The root cause remains unconfirmed. Memory pressure is a suspected contributing factor, not a confirmed cause. The saved failures, predictions and validation warnings are retained without changes. All failures remain incorrect predictions in the full 88-ticket denominator.
+The immediate failure mechanism is confirmed: the triage service could not resolve the backend hostname `ollama`. The underlying infrastructure root cause remains unconfirmed. Memory pressure is a suspected contributing factor, not a confirmed cause. The saved failures, predictions and validation warnings are retained without changes. All failures remain incorrect predictions in the full 88-ticket denominator.
 
 ## Attempts and evidence
 
@@ -14,11 +14,21 @@ Each linked directory contains `manifest.json`, `predictions.csv`, `requests.jso
 
 All attempts completed 88 saved prediction records. Original S1 failed rows 15166, 15168, 15170, 15172 and 15174; the other two attempts failed row 15174. Each failure reconciles to HTTP 502 in the service log and `routing=not_reached`; none is an accepted or escalated result. Accuracy is 62/88 or 64/88, not accuracy over successful requests only.
 
-All three `health_after.json` files contain `Service/Ollama not healthy`. In particular, a successful HTTP response from `/health` does not imply a healthy Ollama backend: the body records backend failure and unavailable residency. These warnings are not erased by completion markers or by the later recovery. The primary [validation record](../results/a2/accuracy/summary_reviewed_r1/validation.json) remains `review_required=true`.
+All three `health_after.json` files contain `Service/Ollama not healthy`. Each `/health` response has HTTP status 200 and body `status=ok`, while separately reporting the backend as down. The [health implementation](../service/main.py) catches an exception from `/api/ps` and sets `loaded_models=[]` and `all_configured_loaded=false`. Those values mean residency could not be established through that query; they do not prove that either model was unloaded or that the Ollama process crashed. These warnings are not erased by completion markers or by later recovery. The primary [validation record](../results/a2/accuracy/summary_reviewed_r1/validation.json) remains `review_required=true`.
+
+## Confirmed failure mechanism and residency limits
+
+The raw response bodies in the [original S1 journal](../results/a2/accuracy/a2_cascade_s1_accuracy_20261119T100108Z_bcf82ced/requests.jsonl), [diagnostic S1 journal](../results/a2/accuracy/a2_cascade_s1_accuracy_20261119T122549Z_e6fa148f/requests.jsonl) and [S2 journal](../results/a2/accuracy/a2_cascade_s2_accuracy_20261119T151248Z_959b77e7/requests.jsonl) identify all **seven failed requests** as `NameResolutionError`: `Failed to resolve 'ollama' ([Errno -3] Temporary failure in name resolution)` while attempting `/api/generate`. These are seven request instances across three attempts, not seven distinct test rows. Service logs record `error_stage=small` and `routing=not_reached` for each one. The failure occurred before small-model inference and the acceptance/escalation decision; it is not a model classification error. The complete response journals supply the detail truncated in the service's error field and health response.
+
+This establishes a hostname-resolution failure on the triage-to-Ollama path, but not why resolution failed. The evidence does not isolate Docker's resolver, network endpoints, daemon, WSL or host resource pressure as the initiating cause. The repeated final-row failure at 15174 does not establish a narrative-triggered model defect, because that request did not reach inference.
+
+All three pre-run health snapshots report both configured models loaded, and their `environment/residency.json` files record the expected model digests and context length. The maximum recorded model-load duration across successful official requests is 16.267133 ms for original S1, 7.649551 ms for diagnostic S1 and 19.712734 ms for S2. None crosses the scorer's >1-second possible-reload threshold. These observations support pre-run residency and show no logged large reload delay; they do not establish continuous residency during the failure interval. The three archived `environment/deployed_main.py` files are byte-identical.
 
 ## File-verified observations
 
 Original S1's `docker_failure_status.txt`, `docker_failure_stats.txt` and `docker_failure_version.txt` record Docker management requests returning **HTTP 500 Internal Server Error**. These management failures are distinct from the HTTP 502 ticket predictions. Do not generalize the original Docker 500 observation to every subsequent attempt.
+
+The diagnostic S1 and S2 `docker_failure_status.txt` snapshots list both triage and Ollama containers as running. Together with the service returning HTTP 502 and HTTP 200 health responses, this rules out treating all three incidents as demonstrated container termination. It does not establish that the backend was reachable or healthy merely because its container was running.
 
 The authoritative saved memory measurement is **8.744 GiB / 9.713 GiB (90.03%)** for Ollama in the controlled S1 rerun's [docker_failure_stats.txt](../results/a2/accuracy/a2_cascade_s1_accuracy_20261119T122549Z_e6fa148f/docker_failure_stats.txt). S2's saved stats show 2.02 GiB / 9.713 GiB. These are snapshots, not a continuous memory trace or proof of usage at the exact failure instant. The earlier **8.745 GiB / 9.713 GiB** observation was reported by the operator from PowerShell output shared in a troubleshooting conversation; no separate matching saved repository measurement was found. It must not replace the file-verified 8.744 GiB value.
 
@@ -44,6 +54,18 @@ The repository independently retains per-run settings/digest/resource snapshots 
 Retain the original S1 attempt as the primary S1 comparison, **subject to team agreement**, and retain the controlled rerun as diagnostic evidence. This matches the existing `summary_reviewed_r1` provenance, preserves the first complete frozen-setting attempt and avoids selecting the more favorable score after observing failures. It is a recommendation, not evidence that team approval has already occurred or that the original run was healthy.
 
 The diagnostic rerun improves by two correct predictions (2.27 percentage points) and reduces backend failures from five to one. It still fails the Debt collection category floor, so substituting it would not make S1 accuracy eligible. Its aggregate category and routing counts match S2, which limits claims that the threshold change explains the primary S1/S2 difference. Neither the improvement nor high memory usage proves a root cause. Memory pressure remains suspected; thermal effects and Docker/WSL instability are possible contextual factors without a confirmed attribution.
+
+Direct prediction comparison finds only four changed outcomes between original and diagnostic S1: failed rows 15166 and 15170 become correct, while 15168 and 15172 become successful but incorrect classifications. All other final predictions are unchanged, including the failure at 15174. Diagnostic S1 and S2 have identical final predictions on all 88 rows. No predictions are substituted across runs.
+
+**Debt collection scores 7/11 (63.64%) in all three cascade attempts, below the exact 735/11% (66.8181818...%) floor, with zero backend failures in that category.** All 11 Debt collection requests completed in each attempt. Even if every infrastructure-failed request elsewhere were hypothetically correct, leaving the other observed predictions fixed, each cascade attempt would still fail this category floor and remain accuracy-ineligible. This is a bound on the recorded eligibility outcome, not a claim that a new run could never produce different predictions.
+
+## Accuracy validity and rerun decision
+
+The failures affected observed scores but did not invalidate the recorded end-to-end accuracy calculation: every attempt has 88 preserved records, failed requests remain incorrect, and request IDs, statuses, labels and counts reconcile. These are measurements of the system including infrastructure failures, not clean estimates of classifier-only accuracy under healthy conditions. Keep all health warnings and the summary's review-required status.
+
+**No additional accuracy rerun is currently necessary** to validate the saved scores or determine the observed accuracy eligibility. Record integrity is established, the diagnostic rerun already exposes the failure pattern, and Debt collection fails independently of the backend failures. Repeating solely to obtain fewer failures would not resolve the unknown cause and risks selecting a more favorable attempt after seeing results.
+
+Before future speed testing, prioritize infrastructure diagnosis and stability checks under the existing A2 constraints. Verify backend name resolution, connectivity and configured-model residency; capture timestamped Docker/network diagnostics, container events and host/WSL memory evidence before recovery if the failure recurs. Keep the same machine, CPU/RAM allocation, model digests, inference settings and frozen thresholds, and use the prescribed idle-host and restart/warm-up procedure. A further accuracy run would be justified only to evaluate a specific corrective action or meet an explicit requirement for a healthy completed run. It must be a new, separately identified attempt, never a replacement for the preserved failures. No corrective action or inference was executed in this investigation.
 
 If the team later chooses a different primary comparison, document that decision and rationale separately and show both attempts. Never merge successful rows across attempts, drop failures, overwrite original predictions, clear validation warnings or retune the frozen rule based on the even-row results.
 
