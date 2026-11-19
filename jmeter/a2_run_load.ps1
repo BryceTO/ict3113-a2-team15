@@ -155,9 +155,11 @@ $fwd = { param($p) $p.Replace("\", "/") }   # Java .properties treats \ as an es
 $feederProp = if ((Resolve-Path $feederPath).Path.StartsWith($repo + "\")) {
     "../" + (Resolve-Path $feederPath).Path.Substring($repo.Length + 1)
 } else { $feederPath }
+# The service host's address is passed on the command line (-Jhost), not written here, and the JTL's
+# URL column is turned off: the committed files then hold no IP address. (The JMeter log does name the
+# machine and address, so it stays local: *.log is git-ignored outside results/logs.)
 @"
 protocol=$Scheme
-host=$TargetHost
 port=$Port
 connect_timeout_ms=10000
 response_timeout_ms=$($st.response_timeout_s * 1000)
@@ -168,6 +170,7 @@ sample_variables=row_id,request_id
 jmeter.save.saveservice.output_format=csv
 jmeter.save.saveservice.print_field_names=true
 jmeter.save.saveservice.timestamp_format=ms
+jmeter.save.saveservice.url=false
 "@ | Set-Content -Path $propsFile -Encoding ascii
 
 $meta = [ordered]@{
@@ -176,7 +179,7 @@ $meta = [ordered]@{
     run                  = $Run
     mode                 = $cfg.mode
     models               = $cfg.models
-    target               = $baseUrl
+    target               = "${Scheme}://<service-host>:$Port"   # address left out: the repo is public
     jmeter_version       = (Split-Path -Leaf $JMeterHome)   # folder name only, e.g. apache-jmeter-5.6.3 (no local path)
     s_source             = $sSource
     settings             = $st
@@ -197,7 +200,7 @@ $meta | ConvertTo-Json -Depth 6 | Set-Content -Path $metaFile -Encoding utf8
 Write-Host "RUN_ID    $runId"
 Write-Host "Schedule  $($st.schedule)   (planned $($st.planned_arrivals) arrivals, seed $Run)"
 Write-Host "Expected end in about $([math]::Ceiling(($st.arrival_window_s + $st.drain_pause_s) / 60)) min. Do not use either machine until JMeter finishes."
-& $jmeterBat -n -t $plan -q $propsFile -l $jtl -j (Join-Path $outDir "$runId.jmeter.log")
+& $jmeterBat -n -t $plan -q $propsFile "-Jhost=$TargetHost" -l $jtl -j (Join-Path $outDir "$runId.jmeter.log")
 $jmeterExit = $LASTEXITCODE
 $meta["jmeter_finished_ms"] = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
 $meta["jmeter_exit_code"] = $jmeterExit
