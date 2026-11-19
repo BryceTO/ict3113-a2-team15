@@ -122,4 +122,6 @@ Invoke-RestMethod http://<service-host-ip>:8000/health
 | `cascade_s2` | | | | |
 | other qualifying singles | | | | |
 
-Commit at which the rule, the prediction record and the workload list were frozen, before the first benchmark run: **`TODO`**.
+Freeze before the first benchmark run:
+- Escalation rule and prediction record: frozen in `docs/escalation_rule.md` and `predictions/a2_prediction_record.md`. Cascade settings: `RULE=length`, S1 `RULE_SETTING=241`, S2 `RULE_SETTING=289`, also in `jmeter/a2_configs.json`.
+- Workload list: the workload files are private; their SHA-256 hashes are checked by the runner and kept in every run's `.meta.json`.
