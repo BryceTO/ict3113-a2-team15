@@ -1,0 +1,16 @@
+﻿{
+    "status":  "ok",
+    "mode":  "cascade",
+    "configured_models":  [
+                              "llama3.2:1b",
+                              "gemma3:4b"
+                          ],
+    "rule":  "length",
+    "rule_setting":  "289",
+    "ollama":  "up",
+    "loaded_models":  [
+                          "gemma3:4b",
+                          "llama3.2:1b"
+                      ],
+    "all_configured_loaded":  true
+}

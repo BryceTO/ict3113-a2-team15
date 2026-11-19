@@ -1,0 +1,31 @@
+{
+  "health": [
+    {
+      "config": "gemma3-4b",
+      "issues": []
+    },
+    {
+      "config": "llama3.2-1b",
+      "issues": []
+    },
+    {
+      "config": "mistral-7b-instruct",
+      "issues": []
+    },
+    {
+      "config": "cascade_s1",
+      "issues": [
+        "Service/Ollama not healthy"
+      ]
+    },
+    {
+      "config": "cascade_s2",
+      "issues": [
+        "Service/Ollama not healthy"
+      ]
+    }
+  ],
+  "unmatched_evidence": 0,
+  "possible_reload_requests": 0,
+  "review_required": true
+}

@@ -1,2 +1,13 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve accuracy evidence bytes exactly, including mixed encodings.
+/results/a2/accuracy/** -text
+/results/logs/a2_*_accuracy_*.log -text
+
+# Reproduce the working-tree bytes used by the recorded source hashes.
+/scripts/run_a2_accuracy.py text eol=crlf
+/scripts/summarize_a2_accuracy.py text eol=crlf
+
+# Preserve embedded narrative newlines used in frozen evaluation.
+/golden_set/a2/*.csv text eol=crlf

@@ -1,0 +1,16 @@
+{
+  "http_status": 200,
+  "headers": {
+    "date": "Thu, 19 Nov 2026 15:28:23 GMT",
+    "server": "uvicorn",
+    "content-length": "284",
+    "content-type": "application/json",
+    "x-request-id": "03bee484-be4c-41b7-98cf-4c18e3640038",
+    "connection": "close"
+  },
+  "body": "{\"status\":\"ok\",\"mode\":\"cascade\",\"configured_models\":[\"llama3.2:1b\",\"gemma3:4b\"],\"rule\":\"length\",\"rule_setting\":\"289\",\"ollama\":\"down: HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: /api/ps (Caused by Nam\",\"loaded_models\":[],\"all_configured_loaded\":false}",
+  "error": "",
+  "validation_issues": [
+    "Service/Ollama not healthy"
+  ]
+}

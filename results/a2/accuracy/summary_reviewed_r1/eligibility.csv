@@ -1,0 +1,6 @@
+config,overall_pass,all_categories_pass,accuracy_eligible,must_speed_test,reason
+llama3.2-1b,False,False,False,False,fails_accuracy_floor
+gemma3-4b,True,True,True,True,passes_both_floors
+mistral-7b-instruct,True,True,True,True,passes_both_floors
+cascade_s1,True,False,False,True,cascade_required_regardless_of_accuracy
+cascade_s2,True,False,False,True,cascade_required_regardless_of_accuracy

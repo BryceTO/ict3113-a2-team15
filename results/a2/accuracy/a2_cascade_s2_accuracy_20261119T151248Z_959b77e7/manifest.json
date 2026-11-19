@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "run_id": "a2_cascade_s2_accuracy_20261119T151248Z_959b77e7",
+  "config": "cascade_s2",
+  "source": "live",
+  "started_at": "2026-11-19T15:14:27.658448+00:00",
+  "test_sha256": "05967ef4b64a87efdc3b5f12e48d3564804ddeea190e41c0b158990a7be3a19c",
+  "expected_config": {
+    "mode": "cascade",
+    "models": [
+      "llama3.2:1b",
+      "gemma3:4b"
+    ],
+    "rule": "length",
+    "rule_setting": 289
+  },
+  "timeout": 630.0,
+  "runner_sha256": "9938a53e34f651ddcd1680a5a69fe719f21224513fa18031a2f6287eb9cc5900",
+  "frozen_commit": "fafe5bfbf5b389e8e8f07cbda18a4a34cb6fe2f4"
+}

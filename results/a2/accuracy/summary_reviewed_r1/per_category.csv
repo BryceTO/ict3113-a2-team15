@@ -1,0 +1,36 @@
+config,category,correct,wrong,total,accuracy_percent,floor_percent,passes
+llama3.2-1b,Credit reporting,6,16,22,27.27272727272727,80.45454545454545,False
+llama3.2-1b,Debt collection,0,11,11,0.0,66.81818181818181,False
+llama3.2-1b,Mortgage,0,15,15,0.0,85.0,False
+llama3.2-1b,Credit card,0,9,9,0.0,85.0,False
+llama3.2-1b,Bank account or service,11,1,12,91.66666666666666,43.333333333333336,True
+llama3.2-1b,Consumer loan,0,6,6,0.0,1.6666666666666667,False
+llama3.2-1b,Money transfer or service,0,13,13,0.0,38.84615384615385,False
+gemma3-4b,Credit reporting,21,1,22,95.45454545454545,80.45454545454545,True
+gemma3-4b,Debt collection,9,2,11,81.81818181818183,66.81818181818181,True
+gemma3-4b,Mortgage,15,0,15,100.0,85.0,True
+gemma3-4b,Credit card,9,0,9,100.0,85.0,True
+gemma3-4b,Bank account or service,7,5,12,58.333333333333336,43.333333333333336,True
+gemma3-4b,Consumer loan,1,5,6,16.666666666666664,1.6666666666666667,True
+gemma3-4b,Money transfer or service,7,6,13,53.84615384615385,38.84615384615385,True
+mistral-7b-instruct,Credit reporting,20,2,22,90.9090909090909,80.45454545454545,True
+mistral-7b-instruct,Debt collection,11,0,11,100.0,66.81818181818181,True
+mistral-7b-instruct,Mortgage,15,0,15,100.0,85.0,True
+mistral-7b-instruct,Credit card,8,1,9,88.88888888888889,85.0,True
+mistral-7b-instruct,Bank account or service,10,2,12,83.33333333333334,43.333333333333336,True
+mistral-7b-instruct,Consumer loan,4,2,6,66.66666666666666,1.6666666666666667,True
+mistral-7b-instruct,Money transfer or service,8,5,13,61.53846153846154,38.84615384615385,True
+cascade_s1,Credit reporting,19,3,22,86.36363636363636,80.45454545454545,True
+cascade_s1,Debt collection,7,4,11,63.63636363636363,66.81818181818181,False
+cascade_s1,Mortgage,14,1,15,93.33333333333333,85.0,True
+cascade_s1,Credit card,8,1,9,88.88888888888889,85.0,True
+cascade_s1,Bank account or service,7,5,12,58.333333333333336,43.333333333333336,True
+cascade_s1,Consumer loan,0,6,6,0.0,1.6666666666666667,False
+cascade_s1,Money transfer or service,7,6,13,53.84615384615385,38.84615384615385,True
+cascade_s2,Credit reporting,19,3,22,86.36363636363636,80.45454545454545,True
+cascade_s2,Debt collection,7,4,11,63.63636363636363,66.81818181818181,False
+cascade_s2,Mortgage,14,1,15,93.33333333333333,85.0,True
+cascade_s2,Credit card,9,0,9,100.0,85.0,True
+cascade_s2,Bank account or service,7,5,12,58.333333333333336,43.333333333333336,True
+cascade_s2,Consumer loan,1,5,6,16.666666666666664,1.6666666666666667,True
+cascade_s2,Money transfer or service,7,6,13,53.84615384615385,38.84615384615385,True

@@ -1,0 +1,14 @@
+﻿OLLAMA_TIMEOUT = float(os.getenv("OLLAMA_TIMEOUT", "300"))
+NUM_CTX = int(os.getenv("NUM_CTX", "4096"))         # keep identical across candidates
+KEEP_ALIVE = os.getenv("KEEP_ALIVE", "30m")         # avoid mid-run model unloads
+_thinking_capable: dict = {}  # model -> bool, from Ollama /api/show (model metadata, not results)
+def model_can_think(model: str) -> bool:
+    if model not in _thinking_capable:
+            _thinking_capable[model] = "thinking" in (r.json().get("capabilities") or [])
+    return _thinking_capable[model]
+    """One synchronous /api/generate call. Same options for every model and every call."""
+        "keep_alive": KEEP_ALIVE,
+        "options": {"temperature": 0, "num_predict": 16, "num_ctx": NUM_CTX},
+    if model_can_think(model):
+        payload["think"] = False
+    r = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=OLLAMA_TIMEOUT)
