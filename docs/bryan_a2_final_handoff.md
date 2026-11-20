@@ -1,6 +1,7 @@
 # Bryan A2 final evidence and slide handoff
 
-Prepared: 20 November 2026  
+Prepared: 20 November 2026
+
 Branch: `bryan/workload-tradeoff`
 
 ## Final recommendation supported by Bryan's evidence
