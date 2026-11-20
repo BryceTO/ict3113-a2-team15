@@ -22,6 +22,8 @@ The same two machines as A1. The load generator stays a separate physical machin
 
 Sources: the A1 record (`docs/test_environment.md`) for the machines, operating systems, Docker Desktop and Compose versions, and power. The residency check (`results/a2/residency/20261117-180010_llama3.2-1b__gemma3-4b/environment.json`) for the service host's Docker Engine version, Docker CPU and memory, and Ollama version and settings; these match A1. Load-generator software versions were read on that laptop.
 
+**Power during the A2 speed runs.** The service host was plugged in for all 12 speed runs. The load generator was mixed, as in A1: on battery for some runs and plugged in for others.
+
 **Service host kept idle.** To keep conditions steady across runs, **nothing else runs on the service host during calibration or a speed run**: no other programs, tests or downloads.
 
 ## 2. Container resources
