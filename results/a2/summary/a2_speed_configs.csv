@@ -1,0 +1,5 @@
+config,runs,run_ids,all_reconciled,flags,p50_per_run_ms,p50_mean_ms,p50_sd_ms,p50_min_ms,p50_max_ms,p50_spread_ms,pooled_p95_ms,pooled_n,planned_total,completed_total,errored_total,unfinished_total,throughput_per_s_per_run,throughput_per_s_mean,error_rate_pct_per_run,escalation_fraction_per_run,escalated_total,routing_decided_total,escalation_fraction_pooled
+cascade_s1,1,a2_cascade_s1_speed_r1,True,,14211,14211.0,,14211,14211,0,25313,30,30,30,0,0,0.058,0.058,0.0,1.0,30,30,1.0
+cascade_s2,1,a2_cascade_s2_speed_r1,True,,10391,10391.0,,10391,10391,0,15429,30,30,30,0,0,0.0581,0.0581,0.0,1.0,30,30,1.0
+gemma3-4b,1,a2_gemma3-4b_speed_r1,True,,5771,5771.0,,5771,5771,0,10632,30,30,30,0,0,0.0588,0.0588,0.0,,,,
+mistral-7b-instruct,1,a2_mistral-7b-instruct_speed_r1,True,a2_mistral-7b-instruct_speed_r1: possible queue growth (2nd-half p50 > 1.5x 1st-half),61409,61409.0,,61409,61409,0,107521,30,30,30,0,0,0.0473,0.0473,0.0,,,,
