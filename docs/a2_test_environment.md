@@ -117,10 +117,10 @@ Invoke-RestMethod http://<service-host-ip>:8000/health
 |---|---|---|---|---|
 | practice run (not a benchmark) | yes: `baf6a787fdff`, `a2af6cc3eb7f`, `6577803aa9a0` | yes: Engine 28.5.1, Compose 2.40.0, 22 CPUs, 10429063168 bytes (9.713 GiB), Ollama 0.35.0, `OLLAMA_NUM_PARALLEL=1`, `OLLAMA_MAX_QUEUE=512`. JMeter 5.6.3 | yes | Cascade with a placeholder rule setting, 2 arrivals: 2 sent, 2 completed, 2 stored by the service. Its log was deleted |
 | calibration | yes: `baf6a787fdff`, `a2af6cc3eb7f`, `6577803aa9a0` | yes: Engine 28.5.1, Compose 2.40.0, 22 CPUs, 10429067264 bytes (9.713 GiB; 4 KiB more than at the practice run, as reported by Docker), Ollama 0.35.0, `OLLAMA_NUM_PARALLEL=1`, `OLLAMA_MAX_QUEUE=512`. JMeter 5.6.3. Ping 15 ms mean (9–30 ms, 0% loss); `tailscale ping` direct, 8 ms | yes | Single `gemma3:4b`. S = 8.5 s (middle of 11506, 8506, 6183 ms), so every run uses rate 3.529412/min, window 510 s, timeout 300 s, drain 360 s, 30 planned arrivals. Record: `results/a2/calibration/a2_calibration.json` |
-| `gemma3-4b` | | | | |
-| `cascade_s1` | | | | |
-| `cascade_s2` | | | | |
-| other qualifying singles | | | | |
+| `gemma3-4b` | yes | yes: same values as at calibration (10429067264 bytes) | yes | Before `a2_gemma3-4b_speed_r1` |
+| `mistral-7b-instruct` | yes | yes: same values as at calibration | yes | Before `a2_mistral-7b-instruct_speed_r1`. The only other single that passes both accuracy floors; `llama3.2-1b` does not, so it has no speed runs |
+| `cascade_s1` | yes | yes: same values as at calibration | yes | Before `a2_cascade_s1_speed_r1` |
+| `cascade_s2` | yes | yes: same values as at calibration | yes | Before `a2_cascade_s2_speed_r1` |
 
 Freeze before the first benchmark run:
 - Escalation rule and prediction record: frozen in `docs/escalation_rule.md` and `predictions/a2_prediction_record.md`. Cascade settings: `RULE=length`, S1 `RULE_SETTING=241`, S2 `RULE_SETTING=289`, also in `jmeter/a2_configs.json`.
