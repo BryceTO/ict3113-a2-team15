@@ -194,3 +194,34 @@ def test_rejects_required_missing_speed_result(tmp_path: Path) -> None:
     write_csv(paths["speed"], list(rows[0]), rows[:1])
     with pytest.raises(TradeoffError, match="required a speed test"):
         build(paths)
+
+
+def test_rejects_duplicate_configuration_id(tmp_path: Path) -> None:
+    paths = make_fixture(tmp_path)
+    rows = list(csv.DictReader(paths["overall"].open(encoding="utf-8", newline="")))
+    write_csv(paths["overall"], list(rows[0]), [*rows, rows[0]])
+    with pytest.raises(TradeoffError, match="duplicate or empty config"):
+        build(paths)
+
+
+def test_rejects_speed_summary_without_three_runs(tmp_path: Path) -> None:
+    paths = make_fixture(tmp_path)
+    rows = list(csv.DictReader(paths["speed"].open(encoding="utf-8", newline="")))
+    rows[0]["runs"] = "2"
+    write_csv(paths["speed"], list(rows[0]), rows)
+    with pytest.raises(TradeoffError, match="does not have three speed runs"):
+        build(paths)
+
+
+def test_accuracy_equal_to_floor_passes_boundary(tmp_path: Path) -> None:
+    paths = make_fixture(tmp_path)
+    rows = list(csv.DictReader(paths["overall"].open(encoding="utf-8", newline="")))
+    rows[0]["accuracy_percent"] = rows[0]["floor_percent"]
+    rows[0]["correct"] = "70"
+    write_csv(paths["overall"], list(rows[0]), rows)
+
+    tradeoff_rows, _ = build(paths)
+    eligible = next(row for row in tradeoff_rows if row["config"] == "eligible")
+    assert eligible["overall_accuracy_percent"] == "70.000000"
+    assert eligible["overall_pass"] == "yes"
+    assert eligible["accuracy_eligible"] == "yes"
