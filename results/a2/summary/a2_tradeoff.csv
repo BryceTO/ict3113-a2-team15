@@ -1,0 +1,6 @@
+config,display_name,overall_correct,overall_total,overall_accuracy_percent,overall_floor_percent,overall_pass,category_fail_count,category_failures,all_categories_pass,accuracy_eligible,must_speed_test,speed_available,p50_mean_seconds,p50_sd_seconds,pooled_p95_seconds,pooled_n,escalation_fraction_pooled,plot_status,chart_note
+gemma3-4b,Gemma 3 4B,69,88,78.409091,68.409091,yes,0,,yes,yes,yes,yes,7.046,2.590,20.396,90,,accuracy_eligible,Passes overall and all category floors
+cascade_s1,Cascade S1,62,88,70.454545,68.409091,yes,2,Consumer loan|Debt collection,no,no,yes,yes,10.843,2.981,23.809,90,1.000,category_floor_failed,"Fails category floor: Consumer loan, Debt collection"
+cascade_s2,Cascade S2,64,88,72.727273,68.409091,yes,1,Debt collection,no,no,yes,yes,14.851,5.527,37.818,90,1.000,category_floor_failed,Fails category floor: Debt collection
+mistral-7b-instruct,Mistral 7B,76,88,86.363636,68.409091,yes,0,,yes,yes,yes,yes,30.433,27.677,95.355,90,,accuracy_eligible,Passes overall and all category floors
+llama3.2-1b,Llama 3.2 1B,17,88,19.318182,68.409091,no,6,Consumer loan|Credit card|Credit reporting|Debt collection|Money transfer or service|Mortgage,no,no,no,no,,,,,,accuracy_failed_speed_unmeasured,Failed accuracy floors; A2 speed not measured
