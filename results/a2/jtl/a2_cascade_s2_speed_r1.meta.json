@@ -1,0 +1,160 @@
+﻿{
+    "run_id":  "a2_cascade_s2_speed_r1",
+    "config":  "cascade_s2",
+    "run":  1,
+    "mode":  "cascade",
+    "models":  [
+                   "llama3.2:1b",
+                   "gemma3:4b"
+               ],
+    "target":  "http://\u003cservice-host\u003e:8000",
+    "jmeter_version":  "apache-jmeter-5.6.3",
+    "s_source":  "results\\a2\\calibration\\a2_calibration.json",
+    "settings":  {
+                     "s_seconds":  8.5,
+                     "arrival_interval_s":  17,
+                     "rate_per_min":  3.529412,
+                     "rate_per_hour":  211.76,
+                     "arrival_window_s":  510,
+                     "arrival_window_min":  8.5,
+                     "response_timeout_s":  300,
+                     "drain_pause_s":  360,
+                     "planned_arrivals":  30,
+                     "schedule":  "rate(3.529412/min) random_arrivals(510 sec) rate(3.529412/min) pause(360 sec)"
+                 },
+    "seed":  1,
+    "feeder_rows":  60,
+    "feeder_rows_used":  [
+                             15182,
+                             15196,
+                             15220,
+                             15224,
+                             15232,
+                             15251,
+                             15271,
+                             15284,
+                             15289,
+                             15293,
+                             15319,
+                             15325,
+                             15340,
+                             15358,
+                             15374,
+                             15375,
+                             15382,
+                             15414,
+                             15428,
+                             15437,
+                             15447,
+                             15481,
+                             15498,
+                             15499,
+                             15504,
+                             15509,
+                             15529,
+                             15531,
+                             15533,
+                             15536
+                         ],
+    "workload_sha256":  {
+                            "a2_workload_rows.csv":  "946cbee7d17e52cfae634e0b76ec7a63cdc2a04f9415180d019feeaaae68d394",
+                            "measured_feeder.tsv":  "4a48b4929afcbfce7918ef30def7f3c9f22fe6cd6129c9aba5a83662bd173fc2",
+                            "warmup_requests.tsv":  "76fe0cb11f3f517c895ca96a891b8ee928d646195468df7e9ebdb79847c7803b",
+                            "calibration_requests.tsv":  "7d1d1de45fa0a736da1cd88a103c50b2529659ff5e44d3ff0a01e24e00a3d4f8",
+                            "README.md":  "201a5253e8131cdc65732f56884eb2b6f9e419206cdef0648dafc573ec68b963"
+                        },
+    "restart_check":  true,
+    "health_before_warmup":  {
+                                 "status":  "ok",
+                                 "mode":  "cascade",
+                                 "configured_models":  [
+                                                           "llama3.2:1b",
+                                                           "gemma3:4b"
+                                                       ],
+                                 "rule":  "length",
+                                 "rule_setting":  "289",
+                                 "ollama":  "up",
+                                 "loaded_models":  [
+
+                                                   ],
+                                 "all_configured_loaded":  false
+                             },
+    "warmup":  [
+                   {
+                       "row_id":  15520,
+                       "request_id":  "09077fc9-3127-45b6-a8e7-758098746693",
+                       "status":  200,
+                       "category":  "Mortgage",
+                       "elapsed_ms":  28125,
+                       "error":  null
+                   },
+                   {
+                       "row_id":  15675,
+                       "request_id":  "af22f5d8-2e28-41a4-9a58-997d0705ba5d",
+                       "status":  200,
+                       "category":  "Mortgage",
+                       "elapsed_ms":  9938,
+                       "error":  null
+                   },
+                   {
+                       "row_id":  15859,
+                       "request_id":  "a1e39afe-c90d-4cf3-9e4f-78e0d1056d7a",
+                       "status":  200,
+                       "category":  "Bank account or service",
+                       "elapsed_ms":  5817,
+                       "error":  null
+                   }
+               ],
+    "health_before_run":  {
+                              "status":  "ok",
+                              "mode":  "cascade",
+                              "configured_models":  [
+                                                        "llama3.2:1b",
+                                                        "gemma3:4b"
+                                                    ],
+                              "rule":  "length",
+                              "rule_setting":  "289",
+                              "ollama":  "up",
+                              "loaded_models":  [
+                                                    "gemma3:4b",
+                                                    "llama3.2:1b"
+                                                ],
+                              "all_configured_loaded":  true
+                          },
+    "stats_before":  {
+                         "Bank account or service":  1,
+                         "Mortgage":  2
+                     },
+    "stats_before_total":  3,
+    "jmeter_started_ms":  1795162223577,
+    "jmeter_finished_ms":  1795163156309,
+    "jmeter_exit_code":  0,
+    "jmeter_log_schedule_line":  "2026-11-20 16:10:26,149 INFO o.a.j.t.o.OpenModelThreadGroup: Starting OpenModelThreadGroup#1 with schedule rate(3.529412/min) random_arrivals(510 sec) rate(3.529412/min) pause(360 sec)",
+    "schedule_started_ms":  1795162226149,
+    "stats_after":  {
+                        "Bank account or service":  6,
+                        "Credit card":  6,
+                        "Credit reporting":  8,
+                        "Debt collection":  4,
+                        "Money transfer or service":  3,
+                        "Mortgage":  6
+                    },
+    "stats_after_total":  33,
+    "stored_during_run":  30,
+    "health_after_run":  {
+                             "status":  "ok",
+                             "mode":  "cascade",
+                             "configured_models":  [
+                                                       "llama3.2:1b",
+                                                       "gemma3:4b"
+                                                   ],
+                             "rule":  "length",
+                             "rule_setting":  "289",
+                             "ollama":  "up",
+                             "loaded_models":  [
+                                                   "gemma3:4b",
+                                                   "llama3.2:1b"
+                                               ],
+                             "all_configured_loaded":  true
+                         }
+}
