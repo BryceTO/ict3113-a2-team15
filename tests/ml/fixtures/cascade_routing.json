@@ -1,0 +1,20 @@
+{
+  "description": "Eight explicit cases plus 80 accepted correct tickets. Gold labels cycle through the seven categories.",
+  "cases": [
+    {"length": 20, "group": "accepted", "prediction": "Credit reporting", "small_category": "Credit reporting", "correct": true},
+    {"length": 20, "group": "accepted", "prediction": "Credit reporting", "small_category": "Credit reporting", "correct": false},
+    {"length": 300, "group": "escalated", "prediction": "Mortgage", "small_category": "Credit reporting", "correct": true},
+    {"length": 300, "group": "escalated", "prediction": "Credit reporting", "small_category": "Credit reporting", "correct": false},
+    {"length": 300, "group": "escalated", "prediction": "Failure", "small_category": "Credit reporting", "correct": false},
+    {"length": 300, "group": "unknown", "prediction": "Failure", "correct": false},
+    {"length": 20, "group": "escalated", "prediction": "Unclassified", "small_category": "Unclassified", "correct": false},
+    {"length": 20, "group": "escalated", "prediction": "Credit reporting", "small_category": "Unclassified", "correct": true}
+  ],
+  "expected": {
+    "total": 88, "overall_correct": 83, "known_decisions": 87,
+    "accepted_count": 82, "accepted_correct": 81,
+    "escalated_count": 5, "escalated_correct": 2,
+    "unknown_count": 1, "unknown_correct": 0,
+    "escalation_fraction_numerator": 5, "escalation_fraction_denominator": 87
+  }
+}
