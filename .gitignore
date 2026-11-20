@@ -184,6 +184,7 @@ cython_debug/
 
 # Local assignment context and source extracts
 context/
+docsbryan/
 
 # Built from context/team15_rows.csv by scripts/make_feeder.py
 jmeter/feeder.tsv
