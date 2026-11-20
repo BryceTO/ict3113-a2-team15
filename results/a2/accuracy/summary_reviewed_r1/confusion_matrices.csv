@@ -1,0 +1,316 @@
+config,golden_label,prediction,count
+llama3.2-1b,Credit reporting,Credit reporting,6
+llama3.2-1b,Credit reporting,Debt collection,0
+llama3.2-1b,Credit reporting,Mortgage,0
+llama3.2-1b,Credit reporting,Credit card,0
+llama3.2-1b,Credit reporting,Bank account or service,16
+llama3.2-1b,Credit reporting,Consumer loan,0
+llama3.2-1b,Credit reporting,Money transfer or service,0
+llama3.2-1b,Credit reporting,Unclassified,0
+llama3.2-1b,Credit reporting,Failure,0
+llama3.2-1b,Debt collection,Credit reporting,1
+llama3.2-1b,Debt collection,Debt collection,0
+llama3.2-1b,Debt collection,Mortgage,0
+llama3.2-1b,Debt collection,Credit card,0
+llama3.2-1b,Debt collection,Bank account or service,10
+llama3.2-1b,Debt collection,Consumer loan,0
+llama3.2-1b,Debt collection,Money transfer or service,0
+llama3.2-1b,Debt collection,Unclassified,0
+llama3.2-1b,Debt collection,Failure,0
+llama3.2-1b,Mortgage,Credit reporting,2
+llama3.2-1b,Mortgage,Debt collection,0
+llama3.2-1b,Mortgage,Mortgage,0
+llama3.2-1b,Mortgage,Credit card,0
+llama3.2-1b,Mortgage,Bank account or service,12
+llama3.2-1b,Mortgage,Consumer loan,1
+llama3.2-1b,Mortgage,Money transfer or service,0
+llama3.2-1b,Mortgage,Unclassified,0
+llama3.2-1b,Mortgage,Failure,0
+llama3.2-1b,Credit card,Credit reporting,1
+llama3.2-1b,Credit card,Debt collection,0
+llama3.2-1b,Credit card,Mortgage,0
+llama3.2-1b,Credit card,Credit card,0
+llama3.2-1b,Credit card,Bank account or service,8
+llama3.2-1b,Credit card,Consumer loan,0
+llama3.2-1b,Credit card,Money transfer or service,0
+llama3.2-1b,Credit card,Unclassified,0
+llama3.2-1b,Credit card,Failure,0
+llama3.2-1b,Bank account or service,Credit reporting,1
+llama3.2-1b,Bank account or service,Debt collection,0
+llama3.2-1b,Bank account or service,Mortgage,0
+llama3.2-1b,Bank account or service,Credit card,0
+llama3.2-1b,Bank account or service,Bank account or service,11
+llama3.2-1b,Bank account or service,Consumer loan,0
+llama3.2-1b,Bank account or service,Money transfer or service,0
+llama3.2-1b,Bank account or service,Unclassified,0
+llama3.2-1b,Bank account or service,Failure,0
+llama3.2-1b,Consumer loan,Credit reporting,0
+llama3.2-1b,Consumer loan,Debt collection,0
+llama3.2-1b,Consumer loan,Mortgage,0
+llama3.2-1b,Consumer loan,Credit card,0
+llama3.2-1b,Consumer loan,Bank account or service,6
+llama3.2-1b,Consumer loan,Consumer loan,0
+llama3.2-1b,Consumer loan,Money transfer or service,0
+llama3.2-1b,Consumer loan,Unclassified,0
+llama3.2-1b,Consumer loan,Failure,0
+llama3.2-1b,Money transfer or service,Credit reporting,1
+llama3.2-1b,Money transfer or service,Debt collection,0
+llama3.2-1b,Money transfer or service,Mortgage,0
+llama3.2-1b,Money transfer or service,Credit card,0
+llama3.2-1b,Money transfer or service,Bank account or service,12
+llama3.2-1b,Money transfer or service,Consumer loan,0
+llama3.2-1b,Money transfer or service,Money transfer or service,0
+llama3.2-1b,Money transfer or service,Unclassified,0
+llama3.2-1b,Money transfer or service,Failure,0
+gemma3-4b,Credit reporting,Credit reporting,21
+gemma3-4b,Credit reporting,Debt collection,0
+gemma3-4b,Credit reporting,Mortgage,0
+gemma3-4b,Credit reporting,Credit card,1
+gemma3-4b,Credit reporting,Bank account or service,0
+gemma3-4b,Credit reporting,Consumer loan,0
+gemma3-4b,Credit reporting,Money transfer or service,0
+gemma3-4b,Credit reporting,Unclassified,0
+gemma3-4b,Credit reporting,Failure,0
+gemma3-4b,Debt collection,Credit reporting,2
+gemma3-4b,Debt collection,Debt collection,9
+gemma3-4b,Debt collection,Mortgage,0
+gemma3-4b,Debt collection,Credit card,0
+gemma3-4b,Debt collection,Bank account or service,0
+gemma3-4b,Debt collection,Consumer loan,0
+gemma3-4b,Debt collection,Money transfer or service,0
+gemma3-4b,Debt collection,Unclassified,0
+gemma3-4b,Debt collection,Failure,0
+gemma3-4b,Mortgage,Credit reporting,0
+gemma3-4b,Mortgage,Debt collection,0
+gemma3-4b,Mortgage,Mortgage,15
+gemma3-4b,Mortgage,Credit card,0
+gemma3-4b,Mortgage,Bank account or service,0
+gemma3-4b,Mortgage,Consumer loan,0
+gemma3-4b,Mortgage,Money transfer or service,0
+gemma3-4b,Mortgage,Unclassified,0
+gemma3-4b,Mortgage,Failure,0
+gemma3-4b,Credit card,Credit reporting,0
+gemma3-4b,Credit card,Debt collection,0
+gemma3-4b,Credit card,Mortgage,0
+gemma3-4b,Credit card,Credit card,9
+gemma3-4b,Credit card,Bank account or service,0
+gemma3-4b,Credit card,Consumer loan,0
+gemma3-4b,Credit card,Money transfer or service,0
+gemma3-4b,Credit card,Unclassified,0
+gemma3-4b,Credit card,Failure,0
+gemma3-4b,Bank account or service,Credit reporting,1
+gemma3-4b,Bank account or service,Debt collection,0
+gemma3-4b,Bank account or service,Mortgage,1
+gemma3-4b,Bank account or service,Credit card,2
+gemma3-4b,Bank account or service,Bank account or service,7
+gemma3-4b,Bank account or service,Consumer loan,0
+gemma3-4b,Bank account or service,Money transfer or service,1
+gemma3-4b,Bank account or service,Unclassified,0
+gemma3-4b,Bank account or service,Failure,0
+gemma3-4b,Consumer loan,Credit reporting,0
+gemma3-4b,Consumer loan,Debt collection,2
+gemma3-4b,Consumer loan,Mortgage,0
+gemma3-4b,Consumer loan,Credit card,2
+gemma3-4b,Consumer loan,Bank account or service,1
+gemma3-4b,Consumer loan,Consumer loan,1
+gemma3-4b,Consumer loan,Money transfer or service,0
+gemma3-4b,Consumer loan,Unclassified,0
+gemma3-4b,Consumer loan,Failure,0
+gemma3-4b,Money transfer or service,Credit reporting,0
+gemma3-4b,Money transfer or service,Debt collection,1
+gemma3-4b,Money transfer or service,Mortgage,0
+gemma3-4b,Money transfer or service,Credit card,1
+gemma3-4b,Money transfer or service,Bank account or service,4
+gemma3-4b,Money transfer or service,Consumer loan,0
+gemma3-4b,Money transfer or service,Money transfer or service,7
+gemma3-4b,Money transfer or service,Unclassified,0
+gemma3-4b,Money transfer or service,Failure,0
+mistral-7b-instruct,Credit reporting,Credit reporting,20
+mistral-7b-instruct,Credit reporting,Debt collection,0
+mistral-7b-instruct,Credit reporting,Mortgage,0
+mistral-7b-instruct,Credit reporting,Credit card,1
+mistral-7b-instruct,Credit reporting,Bank account or service,0
+mistral-7b-instruct,Credit reporting,Consumer loan,1
+mistral-7b-instruct,Credit reporting,Money transfer or service,0
+mistral-7b-instruct,Credit reporting,Unclassified,0
+mistral-7b-instruct,Credit reporting,Failure,0
+mistral-7b-instruct,Debt collection,Credit reporting,0
+mistral-7b-instruct,Debt collection,Debt collection,11
+mistral-7b-instruct,Debt collection,Mortgage,0
+mistral-7b-instruct,Debt collection,Credit card,0
+mistral-7b-instruct,Debt collection,Bank account or service,0
+mistral-7b-instruct,Debt collection,Consumer loan,0
+mistral-7b-instruct,Debt collection,Money transfer or service,0
+mistral-7b-instruct,Debt collection,Unclassified,0
+mistral-7b-instruct,Debt collection,Failure,0
+mistral-7b-instruct,Mortgage,Credit reporting,0
+mistral-7b-instruct,Mortgage,Debt collection,0
+mistral-7b-instruct,Mortgage,Mortgage,15
+mistral-7b-instruct,Mortgage,Credit card,0
+mistral-7b-instruct,Mortgage,Bank account or service,0
+mistral-7b-instruct,Mortgage,Consumer loan,0
+mistral-7b-instruct,Mortgage,Money transfer or service,0
+mistral-7b-instruct,Mortgage,Unclassified,0
+mistral-7b-instruct,Mortgage,Failure,0
+mistral-7b-instruct,Credit card,Credit reporting,0
+mistral-7b-instruct,Credit card,Debt collection,0
+mistral-7b-instruct,Credit card,Mortgage,0
+mistral-7b-instruct,Credit card,Credit card,8
+mistral-7b-instruct,Credit card,Bank account or service,1
+mistral-7b-instruct,Credit card,Consumer loan,0
+mistral-7b-instruct,Credit card,Money transfer or service,0
+mistral-7b-instruct,Credit card,Unclassified,0
+mistral-7b-instruct,Credit card,Failure,0
+mistral-7b-instruct,Bank account or service,Credit reporting,0
+mistral-7b-instruct,Bank account or service,Debt collection,0
+mistral-7b-instruct,Bank account or service,Mortgage,0
+mistral-7b-instruct,Bank account or service,Credit card,0
+mistral-7b-instruct,Bank account or service,Bank account or service,10
+mistral-7b-instruct,Bank account or service,Consumer loan,0
+mistral-7b-instruct,Bank account or service,Money transfer or service,2
+mistral-7b-instruct,Bank account or service,Unclassified,0
+mistral-7b-instruct,Bank account or service,Failure,0
+mistral-7b-instruct,Consumer loan,Credit reporting,0
+mistral-7b-instruct,Consumer loan,Debt collection,1
+mistral-7b-instruct,Consumer loan,Mortgage,0
+mistral-7b-instruct,Consumer loan,Credit card,0
+mistral-7b-instruct,Consumer loan,Bank account or service,1
+mistral-7b-instruct,Consumer loan,Consumer loan,4
+mistral-7b-instruct,Consumer loan,Money transfer or service,0
+mistral-7b-instruct,Consumer loan,Unclassified,0
+mistral-7b-instruct,Consumer loan,Failure,0
+mistral-7b-instruct,Money transfer or service,Credit reporting,0
+mistral-7b-instruct,Money transfer or service,Debt collection,0
+mistral-7b-instruct,Money transfer or service,Mortgage,0
+mistral-7b-instruct,Money transfer or service,Credit card,1
+mistral-7b-instruct,Money transfer or service,Bank account or service,4
+mistral-7b-instruct,Money transfer or service,Consumer loan,0
+mistral-7b-instruct,Money transfer or service,Money transfer or service,8
+mistral-7b-instruct,Money transfer or service,Unclassified,0
+mistral-7b-instruct,Money transfer or service,Failure,0
+cascade_s1,Credit reporting,Credit reporting,19
+cascade_s1,Credit reporting,Debt collection,0
+cascade_s1,Credit reporting,Mortgage,0
+cascade_s1,Credit reporting,Credit card,1
+cascade_s1,Credit reporting,Bank account or service,2
+cascade_s1,Credit reporting,Consumer loan,0
+cascade_s1,Credit reporting,Money transfer or service,0
+cascade_s1,Credit reporting,Unclassified,0
+cascade_s1,Credit reporting,Failure,0
+cascade_s1,Debt collection,Credit reporting,2
+cascade_s1,Debt collection,Debt collection,7
+cascade_s1,Debt collection,Mortgage,0
+cascade_s1,Debt collection,Credit card,0
+cascade_s1,Debt collection,Bank account or service,2
+cascade_s1,Debt collection,Consumer loan,0
+cascade_s1,Debt collection,Money transfer or service,0
+cascade_s1,Debt collection,Unclassified,0
+cascade_s1,Debt collection,Failure,0
+cascade_s1,Mortgage,Credit reporting,0
+cascade_s1,Mortgage,Debt collection,0
+cascade_s1,Mortgage,Mortgage,14
+cascade_s1,Mortgage,Credit card,0
+cascade_s1,Mortgage,Bank account or service,0
+cascade_s1,Mortgage,Consumer loan,0
+cascade_s1,Mortgage,Money transfer or service,0
+cascade_s1,Mortgage,Unclassified,0
+cascade_s1,Mortgage,Failure,1
+cascade_s1,Credit card,Credit reporting,0
+cascade_s1,Credit card,Debt collection,0
+cascade_s1,Credit card,Mortgage,0
+cascade_s1,Credit card,Credit card,8
+cascade_s1,Credit card,Bank account or service,0
+cascade_s1,Credit card,Consumer loan,0
+cascade_s1,Credit card,Money transfer or service,0
+cascade_s1,Credit card,Unclassified,0
+cascade_s1,Credit card,Failure,1
+cascade_s1,Bank account or service,Credit reporting,1
+cascade_s1,Bank account or service,Debt collection,0
+cascade_s1,Bank account or service,Mortgage,1
+cascade_s1,Bank account or service,Credit card,2
+cascade_s1,Bank account or service,Bank account or service,7
+cascade_s1,Bank account or service,Consumer loan,0
+cascade_s1,Bank account or service,Money transfer or service,1
+cascade_s1,Bank account or service,Unclassified,0
+cascade_s1,Bank account or service,Failure,0
+cascade_s1,Consumer loan,Credit reporting,0
+cascade_s1,Consumer loan,Debt collection,2
+cascade_s1,Consumer loan,Mortgage,0
+cascade_s1,Consumer loan,Credit card,2
+cascade_s1,Consumer loan,Bank account or service,1
+cascade_s1,Consumer loan,Consumer loan,0
+cascade_s1,Consumer loan,Money transfer or service,0
+cascade_s1,Consumer loan,Unclassified,0
+cascade_s1,Consumer loan,Failure,1
+cascade_s1,Money transfer or service,Credit reporting,0
+cascade_s1,Money transfer or service,Debt collection,0
+cascade_s1,Money transfer or service,Mortgage,0
+cascade_s1,Money transfer or service,Credit card,1
+cascade_s1,Money transfer or service,Bank account or service,3
+cascade_s1,Money transfer or service,Consumer loan,0
+cascade_s1,Money transfer or service,Money transfer or service,7
+cascade_s1,Money transfer or service,Unclassified,0
+cascade_s1,Money transfer or service,Failure,2
+cascade_s2,Credit reporting,Credit reporting,19
+cascade_s2,Credit reporting,Debt collection,0
+cascade_s2,Credit reporting,Mortgage,0
+cascade_s2,Credit reporting,Credit card,1
+cascade_s2,Credit reporting,Bank account or service,2
+cascade_s2,Credit reporting,Consumer loan,0
+cascade_s2,Credit reporting,Money transfer or service,0
+cascade_s2,Credit reporting,Unclassified,0
+cascade_s2,Credit reporting,Failure,0
+cascade_s2,Debt collection,Credit reporting,2
+cascade_s2,Debt collection,Debt collection,7
+cascade_s2,Debt collection,Mortgage,0
+cascade_s2,Debt collection,Credit card,0
+cascade_s2,Debt collection,Bank account or service,2
+cascade_s2,Debt collection,Consumer loan,0
+cascade_s2,Debt collection,Money transfer or service,0
+cascade_s2,Debt collection,Unclassified,0
+cascade_s2,Debt collection,Failure,0
+cascade_s2,Mortgage,Credit reporting,0
+cascade_s2,Mortgage,Debt collection,0
+cascade_s2,Mortgage,Mortgage,14
+cascade_s2,Mortgage,Credit card,0
+cascade_s2,Mortgage,Bank account or service,0
+cascade_s2,Mortgage,Consumer loan,0
+cascade_s2,Mortgage,Money transfer or service,0
+cascade_s2,Mortgage,Unclassified,0
+cascade_s2,Mortgage,Failure,1
+cascade_s2,Credit card,Credit reporting,0
+cascade_s2,Credit card,Debt collection,0
+cascade_s2,Credit card,Mortgage,0
+cascade_s2,Credit card,Credit card,9
+cascade_s2,Credit card,Bank account or service,0
+cascade_s2,Credit card,Consumer loan,0
+cascade_s2,Credit card,Money transfer or service,0
+cascade_s2,Credit card,Unclassified,0
+cascade_s2,Credit card,Failure,0
+cascade_s2,Bank account or service,Credit reporting,1
+cascade_s2,Bank account or service,Debt collection,0
+cascade_s2,Bank account or service,Mortgage,1
+cascade_s2,Bank account or service,Credit card,2
+cascade_s2,Bank account or service,Bank account or service,7
+cascade_s2,Bank account or service,Consumer loan,0
+cascade_s2,Bank account or service,Money transfer or service,1
+cascade_s2,Bank account or service,Unclassified,0
+cascade_s2,Bank account or service,Failure,0
+cascade_s2,Consumer loan,Credit reporting,0
+cascade_s2,Consumer loan,Debt collection,2
+cascade_s2,Consumer loan,Mortgage,0
+cascade_s2,Consumer loan,Credit card,2
+cascade_s2,Consumer loan,Bank account or service,1
+cascade_s2,Consumer loan,Consumer loan,1
+cascade_s2,Consumer loan,Money transfer or service,0
+cascade_s2,Consumer loan,Unclassified,0
+cascade_s2,Consumer loan,Failure,0
+cascade_s2,Money transfer or service,Credit reporting,0
+cascade_s2,Money transfer or service,Debt collection,0
+cascade_s2,Money transfer or service,Mortgage,0
+cascade_s2,Money transfer or service,Credit card,1
+cascade_s2,Money transfer or service,Bank account or service,5
+cascade_s2,Money transfer or service,Consumer loan,0
+cascade_s2,Money transfer or service,Money transfer or service,7
+cascade_s2,Money transfer or service,Unclassified,0
+cascade_s2,Money transfer or service,Failure,0

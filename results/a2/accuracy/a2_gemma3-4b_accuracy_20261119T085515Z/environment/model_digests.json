@@ -1,0 +1,14 @@
+﻿[
+    {
+        "name":  "mistral:7b-instruct",
+        "digest":  "6577803aa9a036369e481d648a2baebb381ebc6e897f2bb9a766a2aa7bfbc1cf"
+    },
+    {
+        "name":  "gemma3:4b",
+        "digest":  "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a"
+    },
+    {
+        "name":  "llama3.2:1b",
+        "digest":  "baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878"
+    }
+]

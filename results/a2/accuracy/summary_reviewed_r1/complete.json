@@ -1,0 +1,19 @@
+{
+  "files": {
+    "cascade_escalation.csv": "79ad51e4d9863e3626699b0c97f69484c4055a5abebb9fba9fd035e2512cdc86",
+    "cascade_routing.csv": "54dce8a72ec34dfc0a1c27403ba2fa0c47ff1a3545ea4d63f0a1122ebacdd0c7",
+    "cascade_s1.service.jsonl": "9fd8b80f78c0c8a9dd6c965bdbdf00af9e958d443e6dda673a14e85a763c56ee",
+    "cascade_s2.service.jsonl": "dc92c643f21d8e0c26d86e66a1c5e509d71add18860e4195b64098c000bdd851",
+    "confusion_matrices.csv": "c2fe839ab89028665d7fcc9d66442aeba609ac9c819750cb3e3f47d5ae8ce247",
+    "eligibility.csv": "6d831e1487ddddb02d45bd4da58bce5f5c540c6468b3f808fcc544edf322e747",
+    "floors.csv": "325b9a63176fc817b764e161be264a2908f50342e26b83065f44bd4219a7321b",
+    "gemma3-4b.service.jsonl": "77c559ef89b7203cb23db2de2a5ac8bd3be5b42f110a838a723dc9e2ca5552e1",
+    "llama3.2-1b.service.jsonl": "4f070b6c35f840fef6112b6e3eb8f2490fc79d9b95ddf341b15ebef2e5935148",
+    "mistral-7b-instruct.service.jsonl": "bfe4aeb4a94607b80645c225a841d3e5f053fa19e4b0f1e61e9ed71d25fdfc39",
+    "overall.csv": "e7e8fbe681e26422a73f5a94c838c21b907bb9ea6bd636c3b8f33517af438972",
+    "per_category.csv": "89e92e1e83f60f9acb5cdd9e69d9e9e76b17cdd07282dd3ebceca7ad15b11ce7",
+    "provenance.json": "f17723601207564ea319fb073113033a5a0bd988a06fab0fbbf6820ee493e95a",
+    "service_reconciliation.csv": "aaa5179dc4c8556635071dee5abd69dcc1de0dbaf448d4c018bc6442b6a54f76",
+    "validation.json": "fa633e23d0e187aa5d30e983a3e1d36ae157707bd2440caa4e3dedd988044b65"
+  }
+}

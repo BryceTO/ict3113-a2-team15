@@ -1,0 +1,14 @@
+﻿{
+    "status":  "ok",
+    "mode":  "single",
+    "configured_models":  [
+                              "llama3.2:1b"
+                          ],
+    "rule":  null,
+    "rule_setting":  null,
+    "ollama":  "up",
+    "loaded_models":  [
+                          "llama3.2:1b"
+                      ],
+    "all_configured_loaded":  true
+}

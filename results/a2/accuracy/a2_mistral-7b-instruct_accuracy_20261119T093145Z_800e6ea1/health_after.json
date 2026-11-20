@@ -1,0 +1,14 @@
+{
+  "http_status": 200,
+  "headers": {
+    "date": "Thu, 19 Nov 2026 09:57:41 GMT",
+    "server": "uvicorn",
+    "content-length": "190",
+    "content-type": "application/json",
+    "x-request-id": "2c5fbc9c-f5e7-41fa-a656-9f7b757d274a",
+    "connection": "close"
+  },
+  "body": "{\"status\":\"ok\",\"mode\":\"single\",\"configured_models\":[\"mistral:7b-instruct\"],\"rule\":null,\"rule_setting\":null,\"ollama\":\"up\",\"loaded_models\":[\"mistral:7b-instruct\"],\"all_configured_loaded\":true}",
+  "error": "",
+  "validation_issues": []
+}

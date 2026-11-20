@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "test_sha256": "05967ef4b64a87efdc3b5f12e48d3564804ddeea190e41c0b158990a7be3a19c",
+  "scorer_sha256": "be39a32d3a91450223b31b99e38435ad20168de81e4e2253e9068c2eb0fc7e89",
+  "runs": [
+    {
+      "path": "results/a2/accuracy/a2_gemma3-4b_accuracy_20261119T085515Z",
+      "manifest_sha256": "ac433b8c26a4e928536142eb499b4f9391a75011cd40b183e361fb7c67f8d293",
+      "predictions_sha256": "677fbec1f8b8007b2904d26e9d5c7f567420720c96f8922f854f5b51e869447f"
+    },
+    {
+      "path": "results/a2/accuracy/a2_llama3.2-1b_accuracy_20261119T092405Z_e545b8fe",
+      "manifest_sha256": "f4e14edf8834dac6dcf4bc31ec90ff13739f29bd9e4cecd2ca46f1db8a72d8d3",
+      "predictions_sha256": "42de1cbfba101acf5d833019828fe3cb7c608583c3a38a3c897f74f3d784a6fb"
+    },
+    {
+      "path": "results/a2/accuracy/a2_mistral-7b-instruct_accuracy_20261119T093145Z_800e6ea1",
+      "manifest_sha256": "7e44f3cbd35f7bd481cb5266028be6f9ac0f2dc145bbb894c90b33af500d9086",
+      "predictions_sha256": "61b75c4fa7a0fe64d5efa918bcf47122932fc7a553fb4f7b0998603203144861"
+    },
+    {
+      "path": "results/a2/accuracy/a2_cascade_s1_accuracy_20261119T100108Z_bcf82ced",
+      "manifest_sha256": "066fc8c2d3449acf7181a7fe760752530e80cfb5e92e544041489c1d71efb00d",
+      "predictions_sha256": "67182f845aa28f5385ddec9396a3b63b6cb70492826742d0c3ace666f3d0c9a2"
+    },
+    {
+      "path": "results/a2/accuracy/a2_cascade_s2_accuracy_20261119T151248Z_959b77e7",
+      "manifest_sha256": "fb74309dd5f71ec6f23c243aaaa3bcade023350f59859a107ae4fb22718dee7b",
+      "predictions_sha256": "c4dc7813d6f0f6ec415f04a9705e0f9765bcfe71676c0f7827d1c726a9056782"
+    }
+  ],
+  "service_run_ids": {},
+  "logs": {
+    "gemma3-4b": {
+      "path": "results/logs/a2_gemma3-4b_accuracy_20261119T085515Z.log",
+      "sha256": "77c559ef89b7203cb23db2de2a5ac8bd3be5b42f110a838a723dc9e2ca5552e1"
+    },
+    "llama3.2-1b": {
+      "path": "results/logs/a2_llama3.2-1b_accuracy_20261119T092405Z_e545b8fe.log",
+      "sha256": "4f070b6c35f840fef6112b6e3eb8f2490fc79d9b95ddf341b15ebef2e5935148"
+    },
+    "mistral-7b-instruct": {
+      "path": "results/logs/a2_mistral-7b-instruct_accuracy_20261119T093145Z_800e6ea1.log",
+      "sha256": "bfe4aeb4a94607b80645c225a841d3e5f053fa19e4b0f1e61e9ed71d25fdfc39"
+    },
+    "cascade_s1": {
+      "path": "results/logs/a2_cascade_s1_accuracy_20261119T100108Z_bcf82ced.log",
+      "sha256": "9fd8b80f78c0c8a9dd6c965bdbdf00af9e958d443e6dda673a14e85a763c56ee"
+    },
+    "cascade_s2": {
+      "path": "results/logs/a2_cascade_s2_accuracy_20261119T151248Z_959b77e7.log",
+      "sha256": "dc92c643f21d8e0c26d86e66a1c5e509d71add18860e4195b64098c000bdd851"
+    }
+  }
+}

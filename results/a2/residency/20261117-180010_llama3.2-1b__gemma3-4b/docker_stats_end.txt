@@ -1,0 +1,2 @@
+﻿ict3113-a2-team15-triage-1	45.4MiB / 9.713GiB	0.46%	0.32%
+ict3113-a2-team15-ollama-1	5.14GiB / 9.713GiB	52.92%	0.01%

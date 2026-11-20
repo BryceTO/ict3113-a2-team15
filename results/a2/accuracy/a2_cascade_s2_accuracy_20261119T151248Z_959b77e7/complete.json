@@ -1,0 +1,7 @@
+{
+  "rows": 88,
+  "predictions_sha256": "c4dc7813d6f0f6ec415f04a9705e0f9765bcfe71676c0f7827d1c726a9056782",
+  "health_after_sha256": "cce83e8604d8ecc2645656d59665461c8d3dc9a95931857733a5c446d122075a",
+  "completed_at": "2026-11-19T15:28:43.960689+00:00",
+  "failures": 1
+}

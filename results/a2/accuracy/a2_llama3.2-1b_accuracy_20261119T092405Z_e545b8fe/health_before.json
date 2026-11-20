@@ -1,0 +1,12 @@
+{
+  "http_status": 200,
+  "headers": {
+    "date": "Thu, 19 Nov 2026 09:26:42 GMT",
+    "server": "uvicorn",
+    "content-length": "174",
+    "content-type": "application/json",
+    "x-request-id": "046e9d9f-bcba-4578-a5a3-a7aa23754b8f",
+    "connection": "close"
+  },
+  "body": "{\"status\":\"ok\",\"mode\":\"single\",\"configured_models\":[\"llama3.2:1b\"],\"rule\":null,\"rule_setting\":null,\"ollama\":\"up\",\"loaded_models\":[\"llama3.2:1b\"],\"all_configured_loaded\":true}"
+}

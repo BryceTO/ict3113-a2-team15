@@ -1,0 +1,6 @@
+config,category,correct,wrong,total,accuracy_percent,floor_percent,passes
+llama3.2-1b,overall,17,71,88,19.318181818181817,68.4090909090909,False
+gemma3-4b,overall,69,19,88,78.4090909090909,68.4090909090909,True
+mistral-7b-instruct,overall,76,12,88,86.36363636363636,68.4090909090909,True
+cascade_s1,overall,62,26,88,70.45454545454545,68.4090909090909,True
+cascade_s2,overall,64,24,88,72.72727272727273,68.4090909090909,True

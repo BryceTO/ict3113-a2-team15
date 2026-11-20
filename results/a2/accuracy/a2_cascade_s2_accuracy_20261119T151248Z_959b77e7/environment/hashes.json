@@ -1,0 +1,78 @@
+﻿[
+    {
+        "File":  "compose_version.txt",
+        "SHA256":  "f39d912f13a16a99156d32bd6f694756c48fe92b030c8d3595dd36c0142c4e66"
+    },
+    {
+        "File":  "containers.json",
+        "SHA256":  "0202b662237c6432818d7541f91a684603875b0ea44a6d67829a35a91d873e95"
+    },
+    {
+        "File":  "deployed_main.py",
+        "SHA256":  "101ed5b847573adf4362c20c17c7b433a834c1879efd3f0cc55390ac465b2aba"
+    },
+    {
+        "File":  "docker_resources.json",
+        "SHA256":  "9b92312a8d71d9269d8276f077af1c52ad4f86265de0705c0be3770fba5a2efc"
+    },
+    {
+        "File":  "docker_version.json",
+        "SHA256":  "7aa6d58ccc300480c571a4ad145cd17911daf24d8e2da465d0d2fee3ba09b5c3"
+    },
+    {
+        "File":  "health.json",
+        "SHA256":  "ac9a4760c00f8f0c4ac6510753560e3209113230b8afbd124c7c3f332098447a"
+    },
+    {
+        "File":  "health_after_warmup.json",
+        "SHA256":  "ac9a4760c00f8f0c4ac6510753560e3209113230b8afbd124c7c3f332098447a"
+    },
+    {
+        "File":  "health_before_warmup.json",
+        "SHA256":  "1e0af067c35217455658c288fcc34bd8cfc6254024fedbcc6315cd2db2c9bf8b"
+    },
+    {
+        "File":  "health_ready.json",
+        "SHA256":  "ac9a4760c00f8f0c4ac6510753560e3209113230b8afbd124c7c3f332098447a"
+    },
+    {
+        "File":  "inference_settings.txt",
+        "SHA256":  "763914f89d78a772df5a2da28f5c168fcc0d2b16bf7dcc994a8622969c5c19c2"
+    },
+    {
+        "File":  "model_digests.json",
+        "SHA256":  "66772924171db834949272081d957273e51437383109beb7e9a94271f1e01931"
+    },
+    {
+        "File":  "ollama_version.json",
+        "SHA256":  "7bf7b75dc1905eca0e7dc74b86db309786aec574b6bbba7bc8dce3a3182896ec"
+    },
+    {
+        "File":  "preparation.json",
+        "SHA256":  "533d05115cc2d86ff1a55aa0d03f182d06944da8be52e3b1968d028633f8d160"
+    },
+    {
+        "File":  "residency.json",
+        "SHA256":  "e7d00146d928fdba37a3f15d4b6f3eafa9d74a7a4b37ac93119440836d6a9fc2"
+    },
+    {
+        "File":  "warmup_-1_response.json",
+        "SHA256":  "271936989bd9821f1cfcbebb6dbe3fa4f1d63409ba3738f66804f77bd02abcbf"
+    },
+    {
+        "File":  "warmup_-2_response.json",
+        "SHA256":  "62e0c68818f820f635dd14e7e3dc07b3166957e8afdfbd17d3105762151ed10a"
+    },
+    {
+        "File":  "warmup_-3_response.json",
+        "SHA256":  "2167df2ff8a7c21a9b9dcb61c2044ba9a6e3919526f344ac54476757f8e0ce23"
+    },
+    {
+        "File":  "warmup_requests.json",
+        "SHA256":  "0ac752b88bb4c89d4a5ca3f4f42c9ca3415ec1ada1a6380521fb6727b4bfb14c"
+    },
+    {
+        "File":  "warmup_service_logs.json",
+        "SHA256":  "8045afbd81ea5aeff4e29b2509696663709a0f79177c6520db9c1d05f74f85e1"
+    }
+]

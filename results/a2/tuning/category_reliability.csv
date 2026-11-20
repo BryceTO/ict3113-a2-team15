@@ -1,0 +1,8 @@
+predicted_category,predictions,correct,wrong,reliability_percent
+mortgage,1,1,0,100.0
+credit reporting,7,3,4,42.857142857142854
+bank account or service,78,13,65,16.666666666666664
+consumer loan,1,0,1,0.0
+debt collection,0,0,0,
+credit card,0,0,0,
+money transfer or service,0,0,0,
