@@ -1,0 +1,23 @@
+{
+  "description": "Three correct, one wrong category, one backend failure. No real complaints.",
+  "tickets": [
+    {"row": 2, "golden_label": "Credit reporting", "prediction": "Credit reporting", "correct": true},
+    {"row": 4, "golden_label": "Credit reporting", "prediction": "Debt collection", "correct": false},
+    {"row": 6, "golden_label": "Debt collection", "prediction": "Debt collection", "correct": true},
+    {"row": 8, "golden_label": "Debt collection", "prediction": "Debt collection", "correct": true},
+    {"row": 10, "golden_label": "Debt collection", "prediction": "Failure", "correct": false}
+  ],
+  "expected": {
+    "correct": 3, "wrong": 2, "total": 5, "accuracy_percent": 60.0,
+    "per_category": {
+      "Credit reporting": {"correct": 1, "total": 2, "accuracy_percent": 50.0},
+      "Debt collection": {"correct": 2, "total": 3, "accuracy_percent": 66.66666666666667}
+    },
+    "nonzero_confusion": [
+      ["Credit reporting", "Credit reporting", 1],
+      ["Credit reporting", "Debt collection", 1],
+      ["Debt collection", "Debt collection", 2],
+      ["Debt collection", "Failure", 1]
+    ]
+  }
+}
